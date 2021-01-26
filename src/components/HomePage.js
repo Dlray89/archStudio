@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles, Grid, Button, ButtonGroup } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import paramour from "../assets/home/desktop/image-hero-paramour.jpg";
-import federal from '../assets/home/desktop/image-hero-federal.jpg'
+// import federal from '../assets/home/desktop/image-hero-federal.jpg'
 import welcome from "../assets/home/desktop/image-welcome.jpg";
+import smallTeam from '../assets/home/desktop/image-small-team.jpg'
 
-
-const heroCards = [
-    {img: paramour, text:'  Project made for an art museum near Southwest London. Project Paramour isa statement of bold, modern architecture.'},
-    {img: federal, text: ' A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.'} 
-]
+// const heroCards = [
+//     {img: paramour, text:'  Project made for an art museum near Southwest London. Project Paramour isa statement of bold, modern architecture.'},
+//     {img: federal, text: ' A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.'} 
+// ]
 
 
 const useStyles = makeStyles((theme) => ({
@@ -118,16 +118,53 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: "100%",
   },
+  smallTeam:{
+      background: 'url('+ smallTeam +')',
+      backgroundRepeat:'no-repeat',
+      width:'68%',
+      marginLeft:'7em',
+      padding:'8em',
+      marginTop:'7em'
+  },
+  smallTeamTitle:{
+      marginTop:'2em',
+      color:'white',
+      border:'solid 2px red',
+      fontSize:'3em',
+      textAlign:'left',
+      width:'50%',
+      marginLeft:'1.5em',
+      fontFamily: 'Spartan, sans-serif',
+      fontWeight: 500
+
+  },
+  smallTeamButtonContainer:{
+      border:'solid 2px green',
+      textAlign:'left',
+      marginLeft:'4.2em',
+      width:'45%',
+      marginTop:'1em'
+
+
+  },
+  smallTeamButton:{
+      background:'black',
+      color:'white',
+      fontFamily: 'Spartan, sans-serif',
+      fontWeight:500
+
+  }
+  
 }));
 
 const HomePage = () => {
   const classes = useStyles();
-  const [activeButton, setActiveButton] = useState(0)
-  const maxStep = heroCards.length
+//   const [activeButton, setActiveButton] = useState(0)
+//   const maxStep = heroCards.length
 
-  const handleNext = () => {
-      setActiveButton((prevActive) => prevActive + 1)
-  }
+//   const handleNext = () => {
+//       setActiveButton((prevActive) => prevActive + 1)
+//   }
 
  
   return (
@@ -218,9 +255,21 @@ const HomePage = () => {
           </Grid>
 
           <Grid item className={classes.imgContainer}>
-            <img className={classes.img} src={welcome} />
+            <img alt='welcome pic' className={classes.img} src={welcome} />
           </Grid>
         </Grid>
+      </Grid>
+
+      < Grid container direction='column'  className={classes.smallTeam}>
+      <div>
+          <Grid item className={classes.smallTeamTitle}>
+              Small Team, Big ideas
+          </Grid>
+
+          <Grid item className={classes.smallTeamButtonContainer}>
+              <Button variant='contained' className={classes.smallTeamButton}>About us <ArrowRightAltIcon  /></Button>
+          </Grid>
+        </div>
       </Grid>
     </div>
   );
