@@ -1,27 +1,41 @@
-import React from "react";
-import { makeStyles, Grid, Button, ButtonGroup } from "@material-ui/core";
+import React, { useState} from "react";
+import { makeStyles, Grid, Button, MobileStepper, useTheme } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import paramour from "../assets/home/desktop/image-hero-paramour.jpg";
-// import federal from '../assets/home/desktop/image-hero-federal.jpg'
+import federal from '../assets/home/desktop/image-hero-federal.jpg'
+import seraph from '../assets/home/desktop/image-hero-seraph.jpg'
+import trinity from '../assets/home/desktop/image-hero-trinity.jpg'
 import welcome from "../assets/home/desktop/image-welcome.jpg";
 import smallTeam from '../assets/home/desktop/image-small-team.jpg'
+// import SwipeableViews from  'react-swipeable-views'
+// import {autoPlay} from 'react-swipeable-views-utils'
 
-// const heroCards = [
-//     {img: paramour, text:'  Project made for an art museum near Southwest London. Project Paramour isa statement of bold, modern architecture.'},
-//     {img: federal, text: ' A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.'} 
-// ]
+
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+
+
+// const AutoPlay = autoPlay(SwipeableViews)
+
+//set heroCard objects
+const heroCards = [
+    {label: ' Project Paramour',img: paramour, text:'  Project made for an art museum near Southwest London. Project Paramour isa statement of bold, modern architecture.'},
+    {label: 'Federal II Tower', img: federal, text: ' A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.'}, 
+    {label: 'Seraph Station', img: seraph, text: ' The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.'} ,
+    {label: 'Trinity Bank Tower', img: trinity, text: ' Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.'} 
+]
 
 
 const useStyles = makeStyles((theme) => ({
   homepage: {
-    backgroundImage: "url(" + paramour + ")",
+    
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "60em",
     backgroundPositionY: "5%",
     width: "68%",
     position: "absolute",
-    top: "20%",
+    top: "15%",
     left: "8%",
     height: "30em",
   },
@@ -159,11 +173,22 @@ const useStyles = makeStyles((theme) => ({
 
 const HomePage = () => {
   const classes = useStyles();
-//   const [activeButton, setActiveButton] = useState(0)
-//   const maxStep = heroCards.length
+  const theme = useTheme()
+  //create state of active step here
+  const [activeButton, setActiveButton] = useState(0)
+  //set the max of herocards in the object array by using .length
+  const maxStep = heroCards.length
 
-//   const handleNext = () => {
-//       setActiveButton((prevActive) => prevActive + 1)
+  const handleNext = () => {
+      setActiveButton((prevActive) => prevActive + 1)
+  }
+
+  const handleBack = () => {
+      setActiveButton((prevActive) => prevActive - 1)
+  }
+
+//   const handleStepChange = (steps) => {
+//       setActiveButton(steps)
 //   }
 
  
@@ -174,16 +199,18 @@ const HomePage = () => {
         direction="column"
         justify="flex-start"
         className={classes.homepage}
+        style={{backgroundImage: "url(" + heroCards[activeButton].img + ")",}}
       >
+          
         <div style={{ background: "rgba(27, 20, 17, 0.4)", height: "30em" }}>
           <Grid item className={classes.headerTitle}>
-            Project Paramour
+           {heroCards[activeButton].label}
           </Grid>
 
           <Grid item className={classes.headerSubtitle}>
-            Project made for an art museum near Southwest London. Project
-            Paramour is a statement of bold, modern architecture.
+            {heroCards[activeButton].text}
           </Grid>
+         
 
           <Grid item className={classes.headerButtonContainer}>
             <Button variant="contained" className={classes.headerButton}>
@@ -191,26 +218,27 @@ const HomePage = () => {
             </Button>
           </Grid>
 
-          <Grid item className={classes.buttonGroupContainer}>
-            <ButtonGroup className={classes.buttonGroup}>
-              <Button
-                variant="outlined"
-                style={{ background: "black", color: "#fff" }}
-                className={classes.buttonGroupButtons}
-              >
-                01
+          <MobileStepper
+          style={{marginTop:'4.8em', background:'#EEEFF4'}}
+          steps={maxStep}
+          position='static'
+          variant='dots'
+          activeStep={activeButton}
+          nextButton={
+              <Button  size='small' onClick={handleNext} disabled={activeButton === maxStep -1}>
+                  Next
+                  {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                </Button>
+          }
+          backButton={
+            <Button   size='small' onClick={handleBack} disabled={activeButton === 0}>
+                
+                {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft /> }
+                back
               </Button>
-              <Button  variant="outlined" className={classes.buttonGroupButtons}>
-                02
-              </Button>
-              <Button variant="outlined" className={classes.buttonGroupButtons}>
-                03
-              </Button>
-              <Button variant="outlined" className={classes.buttonGroupButtons}>
-                04
-              </Button>
-            </ButtonGroup>
-          </Grid>
+        }
+          
+          />
         </div>
       </Grid>
 
