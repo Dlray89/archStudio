@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    backgroundSize: "60em",
+    backgroundSize: "65em",
     backgroundPositionY: "5%",
     width: "68%",
     position: "absolute",
@@ -202,7 +202,7 @@ const HomePage = () => {
         style={{backgroundImage: "url(" + heroCards[activeButton].img + ")",}}
       >
           
-        <div style={{ background: "rgba(27, 20, 17, 0.4)", height: "30em" }}>
+        <div style={{ background: "rgba(27, 20, 17, 0.4)", height: "30em", width:'100%' }}>
           <Grid item className={classes.headerTitle}>
            {heroCards[activeButton].label}
           </Grid>
