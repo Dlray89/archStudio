@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'2em',
         width:'20%',
         fontFamily: 'Spartan, sans-serif',
-        fontWeight: 500
+        fontWeight: 700
 
     },
     buttonMainContainer:{
