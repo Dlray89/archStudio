@@ -101,6 +101,10 @@ const useStyles = makeStyles((theme) => ({
   portcontainerTwo: {
     width: "60%",
     marginBottom: "14em",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      border:'solid 2px red'
+    },
   },
 }));
 
@@ -300,7 +304,8 @@ const Navigation = () => {
             </Hidden>
           </Grid>
 
-          <Grid item container className={classes.portcontainerTwo}>
+          <Grid direction={matchesSM ? "row" : null}
+            justify={matchesSM ? "space-between" : null} item container className={classes.portcontainerTwo}>
             <Grid item className={classes.portimgCOntainer}>
               <img className={classes.portlogo} alt="logo of Arch" src={Logo} />
             </Grid>

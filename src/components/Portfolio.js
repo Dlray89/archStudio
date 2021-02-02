@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { makeStyles, Grid, Button} from '@material-ui/core'
+import { makeStyles, Grid, Button, useMediaQuery, useTheme} from '@material-ui/core'
 import Logo from '../assets/logo.svg'
 
 import bTowers from '../assets/portfolio/desktop/image-228b.jpg'
@@ -23,21 +23,40 @@ const useStyles = makeStyles((theme) => ({
         top:'25%',
         left:'8%',
         width:'75%',
+        [theme.breakpoints.down('sm')]:{
+            
+            width:'99%',
+            left:0,
+            top:'10%'
+            
+        }
     },
     mainGridContainer:{
 
     },
     containerOne:{
-        marginBottom:'3em'
+        marginBottom:'3em',
+        [theme.breakpoints.down('sm')]:{
+            margin:0
+        }
     },
     containerTwo:{
-        marginBottom:'3em'
+        marginBottom:'3em',
+        [theme.breakpoints.down('sm')]:{
+            margin:0
+        }
     },
     containerThree:{
-        marginBottom:'3em'
+        marginBottom:'3em',
+        [theme.breakpoints.down('sm')]:{
+            margin:0
+        }
     },
     containerFour:{
-        marginBottom:'3em'
+        marginBottom:'3em',
+        [theme.breakpoints.down('sm')]:{
+            margin:0
+        }
     },
     seraph:{
         backgroundImage:'url(' + seraph + ')',
@@ -45,7 +64,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'3.5em',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     eeBox:{
@@ -54,7 +79,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'auto',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     federal:{
@@ -62,7 +93,13 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat:'no-repeat',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     delSol:{
@@ -71,7 +108,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'3.5em',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     prototype:{
@@ -80,7 +123,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'auto',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     bTower:{
@@ -89,7 +138,13 @@ const useStyles = makeStyles((theme) => ({
         
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     edelweiss:{
@@ -98,7 +153,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'3.5em',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     netcry:{
@@ -107,7 +168,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'auto',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     hypers:{
@@ -116,7 +183,13 @@ const useStyles = makeStyles((theme) => ({
         
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     sxiv:{
@@ -125,7 +198,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'3.5em',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     trinity:{
@@ -134,7 +213,13 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'auto',
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     paramour:{
@@ -143,7 +228,13 @@ const useStyles = makeStyles((theme) => ({
         
         width:'30%',
         height:'30em',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        [theme.breakpoints.down('sm')]:{
+            
+            margin:0,
+            width:'80%',
+            marginBottom:'2em'
+        }
 
     },
     portfolioTitle:{
@@ -167,28 +258,51 @@ const useStyles = makeStyles((theme) => ({
     },
     Footer:{
         background:'#EEEFF4',
-        width:'92%',
-        marginLeft:'0em',
-        marginTop:'5em'
+        width:'62%',
+        marginLeft:'7em',
+        marginTop:'5em',
+        [theme.breakpoints.down('sm')]:{
+          margin:0,
+          width:'100%',
+          marginTop:'6em'
+        }
     },
     logoMainContainer:{
         background:'black',
         width:'15%',
         boxSizing:'border-box',
-        height:'12em'
+        height:'12em',
+        [theme.breakpoints.down('sm')]:{
+          margin:0,
+          width:'30%',
+          position:'absolute',
+          top:'385em',
+          height:'8em'
+        }
     
     },
     logoContainer:{
     },
     logo:{
-        marginTop:'4em'
+        marginTop:'4em',
+        [theme.breakpoints.down('sm')]:{
+          width:'5em',
+          marginTop:'2.7em'
+        }
+        
        
     
     },
     linksCOntainer:{
         width:'60%',
         marginLeft:'3em',
-        marginTop:'2em'
+        marginTop:'2em',
+        [theme.breakpoints.down('sm')]:{
+          margin:0,
+          width:'100%',
+          marginTop:'5em',
+          marginBottom:'5em'
+        }
     },
     links:{
         margin: 0,
@@ -197,17 +311,33 @@ const useStyles = makeStyles((theme) => ({
         width:'20%',
         fontFamily: 'Spartan, sans-serif',
         fontWeight: 700,
-        fontSize:'0.75em'
+        fontSize:'0.75em',
+        [theme.breakpoints.down('sm')]:{
+          margin:0,
+          width:'100%',
+          textAlign:'center'
+        }
     
     },
     buttonMainContainer:{
         width:'20%',
         position:'absolute',
-        left:'83%'
+        left:'63%',
+        [theme.breakpoints.down('sm')]:{
+          margin:0,
+          width:'100%',
+          textAlign:'center',
+          marginTop:'3em',
+          left:0
+        }
     
     },
     buttonContainer:{
         width:'100%',
+        [theme.breakpoints.down('sm')]:{
+          marginBottom:'1em',
+          
+        }
     
     },
     button:{
@@ -215,6 +345,14 @@ const useStyles = makeStyles((theme) => ({
         background:'black',
         fontFamily: 'Spartan, sans-serif',
     
+    },
+    
+    mobileStepper:{
+      marginTop: "4.8em",
+      background: "#EEEFF4",
+      [theme.breakpoints.down('sm')]:{
+        margin:0
+      }
     }
 }))
 
@@ -222,6 +360,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Portfolio = (props) => {
     const classes = useStyles()
+    const theme = useTheme()
+    const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
 
     // const navLinks = [
     //     { id: 1, label: "Home", link: "/",},
@@ -233,7 +373,7 @@ const Portfolio = (props) => {
         <div className={classes.portfolio}>
            
             <Grid container direction='column' alignItems='center'>
-                <Grid item container direction='row'  alignItems='center' className={classes.containerOne}>
+                <Grid item container direction={matchesSM ? 'column':'row'}  alignItems='center' className={classes.containerOne}>
                     <Grid item container direction='column' className={classes.seraph} component={Link}>
                         <div style={{background: "rgba(27, 20, 17, 0.3)", height:'100%', width:'100%'}}>
                        <Grid item className={classes.portfolioTitle}>
@@ -271,7 +411,7 @@ const Portfolio = (props) => {
                     </Grid>
                 </Grid>
 
-                <Grid className={classes.containerTwo}  item container direction='row' alignItems='center'>
+                <Grid className={classes.containerTwo}  item container direction={matchesSM ? 'column':'row'} alignItems='center'>
                     <Grid component={Link} item container direction='column' className={classes.delSol}>
                         <div style={{background: "rgba(27, 20, 17, 0.3)", height:'100%', width:'100%'}}>
                        <Grid item className={classes.portfolioTitle}>
@@ -310,7 +450,7 @@ const Portfolio = (props) => {
                 </Grid>
 
 
-                <Grid className={classes.containerThree}  item container direction='row'  alignItems='center'>
+                <Grid className={classes.containerThree}  item container direction={matchesSM ? 'column':'row'}alignItems='center'>
                     <Grid component={Link} item container direction='column' className={classes.edelweiss}>
                         <div style={{background: "rgba(27, 20, 17, 0.3)", height:'100%', width:'100%'}}>
                        <Grid item className={classes.portfolioTitle}>
@@ -348,7 +488,7 @@ const Portfolio = (props) => {
                     </Grid>
                 </Grid>
 
-                <Grid className={classes.containerFour}  item container direction='row' alignItems='center'>
+                <Grid className={classes.containerFour}  item container direction={matchesSM ? 'column':'row'} alignItems='center'>
                     <Grid component={Link} item container direction='column' className={classes.sxiv}>
                         <div style={{background: "rgba(27, 20, 17, 0.3)", height:'100%', width:'100%'}}>
                        <Grid item className={classes.portfolioTitle}>
@@ -389,7 +529,7 @@ const Portfolio = (props) => {
 
             </Grid>
 
-            <Grid container direction='row' alignItems='center' className={classes.Footer}>
+            <Grid container direction={ matchesSM ? 'column-reverse' : 'row'} alignItems='center' className={classes.Footer}>
             <Grid container item justify='center' className={classes.logoMainContainer}>
                 <Grid item className={classes.logoContainer}>
                 <img className={classes.logo} alt='arch logo in white' src={Logo} />
@@ -398,7 +538,7 @@ const Portfolio = (props) => {
                
             </Grid>
 
-            <Grid container item direction='row' alignItems='center'  className={classes.linksCOntainer}>
+            <Grid container item direction={matchesSM ? 'column' : 'row'} alignItems='center'  className={classes.linksCOntainer}>
             <Grid item className={classes.links} component={Link} to='/' onClick={props.homeLink}>
                     Home
                 </Grid>
