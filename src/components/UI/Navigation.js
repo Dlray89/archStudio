@@ -103,7 +103,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "14em",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      border:'solid 2px red'
     },
   },
 }));
