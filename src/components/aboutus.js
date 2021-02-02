@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom'
-import { Grid, makeStyles, Button } from "@material-ui/core";
+import { Grid, makeStyles, Button, Hidden, useTheme, useMediaQuery } from "@material-ui/core";
 import heroCard from "../assets/about/desktop/image-hero.jpg";
 import heritage from "../assets/about/desktop/image-heritage.jpg";
 
@@ -19,11 +19,22 @@ const useStyles = makeStyles((theme) => ({
     top: "20%",
     left: "8%",
     width: "80%",
+    [theme.breakpoints.down('sm')]:{
+     
+      left: 0,
+      width:'99%',
+      top:'10%'
+    }
   },
   firstContainer: {
+    [theme.breakpoints.down('sm')]:{
+    }
   },
   imgContainer: {
     width: "50%",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%'
+    }
   },
   img: {
     width: "100%",
@@ -39,7 +50,10 @@ const useStyles = makeStyles((theme) => ({
     color: "#EEEFF4",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 900,
-    zIndex: 1
+    zIndex: 1,
+    [theme.breakpoints.down('sm')]:{
+      border:'solid 2px blue'
+    }
   },
   textContainer: {
     width: "62%",
@@ -48,6 +62,12 @@ const useStyles = makeStyles((theme) => ({
     background: "white",
     top: "15%",
     left: "38%",
+    [theme.breakpoints.down('sm')]:{
+      left:0,
+      width:'90%',
+      height:'20em',
+      top:'14%'
+    }
   },
   textTitle: {
     width: "60%",
@@ -57,6 +77,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     fontFamily: "Spartan, sans-serif",
     fontWeight:600,
+    [theme.breakpoints.down('sm')]:{
+      width:'70%',
+      fontSize:'2em',
+      margin:0,
+      marginTop:'1em'
+    }
+    
   },
   textSubtitle: {
     width: "60%",
@@ -65,12 +92,30 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.95em",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 500,
+    [theme.breakpoints.down('sm')]:{
+      width:'70%',
+      fontSize:'1em',
+      margin:0,
+      marginTop:'0.55em'
+    }
   },
   secondContainer: {
     marginTop: "5em",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      fontSize:'1em',
+      margin:0,
+      marginTop:'18em'
+    }
+    
   },
   ourHeritage: {
     width: "50%",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+
+     
+    }
   },
   ourHeritageTitle: {
     fontSize: "4em",
@@ -79,7 +124,14 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1em",
     marginTop: "1.2em",
     fontFamily: "Spartan, sans-serif",
-    fontWeight:600
+    fontWeight:600,
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      fontSize:'2em',
+      margin:0,
+      marginTop:'0.55em',
+      textAlign:'center'
+    }
 
   },
   ourHeritageSubTitle: {
@@ -87,7 +139,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1em",
     fontSize: "0.95em",
     fontFamily: "Spartan, sans-serif",
-    color:'black'
+    color:'black',
+    [theme.breakpoints.down('sm')]:{
+      width:'80%',
+      fontSize:'1em',
+      margin:0,
+      marginTop:'0.55em',
+      textAlign:'center',
+      fontWeight:500,
+    }
 
   },
   ourHeritageImgContainer: {
@@ -99,89 +159,172 @@ const useStyles = makeStyles((theme) => ({
       width:'92.7%',
       marginLeft:'5em',
       marginTop:'3em',
+      [theme.breakpoints.down('sm')]:{
+        width:'100%',
+        margin:0,
+        marginTop:'2em'
+      }
+      
       
   },
   firstSection:{
-     width:'100%',     
+     width:'100%',
+     [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      margin:0
+    }     
      
   },
   theLeadersContainer:{
     width:'30%',
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      margin:0,
+      marginBottom:'1em'
+      
+    }
   },
   theLeadersTitle:{
       fontSize:'3.6em',
       marginBottom:'5em',
-      width:'25%'
+      width:'25%',
+      [theme.breakpoints.down('sm')]:{
+        width:'100%',
+        margin:0,
+        fontSize:'2em',
+        textAlign:'center',
+        marginBottom:'1em'
+      }
   },
   mainLeaders:{
       width:'60%',
+      [theme.breakpoints.down('sm')]:{
+        width:'80%',
+        margin:0
+      }
       
       
   },
+  
   theLeadersimg:{
-      width:'100%'
+      width:'100%',
+      [theme.breakpoints.down('sm')]:{
+        width:'99%'
+      }
   },
-  Footer:{
-    background:'#EEEFF4',
-    width:'85%',
-    marginLeft:'5em',
-    marginTop:'5em'
+ 
+Footer:{
+  background:'#EEEFF4',
+  width:'62%',
+  marginLeft:'7em',
+  marginTop:'5em',
+  [theme.breakpoints.down('sm')]:{
+    margin:0,
+    width:'100%',
+    marginTop:'6em'
+  }
 },
 logoMainContainer:{
-    background:'black',
-    width:'15%',
-    boxSizing:'border-box',
-    height:'12em'
+  background:'black',
+  width:'15%',
+  boxSizing:'border-box',
+  height:'12em',
+  [theme.breakpoints.down('sm')]:{
+    margin:0,
+    width:'30%',
+    position:'absolute',
+    top:'175em',
+    height:'8em'
+  }
 
 },
 logoContainer:{
 },
 logo:{
-    marginTop:'4em'
-   
+  marginTop:'4em',
+  [theme.breakpoints.down('sm')]:{
+    width:'5em',
+    marginTop:'2.7em'
+  }
+  
+ 
 
 },
 linksCOntainer:{
-    width:'60%',
-    marginLeft:'3em',
-    marginTop:'2em'
+  width:'60%',
+  marginLeft:'3em',
+  marginTop:'2em',
+  [theme.breakpoints.down('sm')]:{
+    margin:0,
+    width:'100%',
+    marginTop:'5em',
+    marginBottom:'5em'
+  }
 },
 links:{
-    margin: 0,
-    height: '3em',
-    marginRight:'2em',
-    width:'20%',
-    fontFamily: 'Spartan, sans-serif',
-    fontWeight: 700,
-    fontSize:'0.75em'
+  margin: 0,
+  height: '3em',
+  marginRight:'2em',
+  width:'20%',
+  fontFamily: 'Spartan, sans-serif',
+  fontWeight: 700,
+  fontSize:'0.75em',
+  [theme.breakpoints.down('sm')]:{
+    margin:0,
+    width:'100%',
+    textAlign:'center'
+  }
 
 },
 buttonMainContainer:{
-    width:'20%',
-    position:'absolute',
-    left:'83%'
+  width:'20%',
+  position:'absolute',
+  left:'63%',
+  [theme.breakpoints.down('sm')]:{
+    margin:0,
+    width:'100%',
+    textAlign:'center',
+    marginTop:'3em',
+    left:0
+  }
 
 },
 buttonContainer:{
-    width:'100%',
+  width:'100%',
+  [theme.breakpoints.down('sm')]:{
+    marginBottom:'1em',
+    
+  }
 
 },
 button:{
-    color:'white',
-    background:'black',
-    fontFamily: 'Spartan, sans-serif',
+  color:'white',
+  background:'black',
+  fontFamily: 'Spartan, sans-serif',
 
+},
+
+mobileStepper:{
+marginTop: "4.8em",
+background: "#EEEFF4",
+[theme.breakpoints.down('sm')]:{
+  margin:0
+}
 }
 }));
 
 const AboutUs = (props) => {
   const classes = useStyles();
+  const theme = useTheme()
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <Grid container direction="column" className={classes.aboutUs}>
       <Grid item container direction="row" className={classes.firstContainer}>
+        <Hidden mdDown>
         <Grid item className={classes.aboutusText}>
           About Us
         </Grid>
+        </Hidden>
         <Grid item container className={classes.imgContainer}>
           <img
             className={classes.img}
@@ -248,20 +391,21 @@ const AboutUs = (props) => {
             project.
           </Grid>
         </Grid>
-
+        <Hidden mdDown>
         <Grid item className={classes.ourHeritageImgContainer}>
           <img className={classes.ourHeritageImg} alt="" src={heritage} />
         </Grid>
+        </Hidden>
       </Grid>
 
-      <Grid container direction='row' alignItems='center' justify='space-between' className={classes.thridContainer}>
+      <Grid container direction={matchesSM ? 'column' : 'row'} alignItems='center' justify='space-between' className={classes.thridContainer}>
         <Grid item className={classes.theLeadersTitle}>
                 The Leaders
         </Grid>
 
         <Grid item className={classes.mainLeaders}>
         <Grid item direction='column' alignItems='center' container style={{width:'100%'}}>
-            <Grid style={{marginBottom:'2em'}} className={classes.firstSection} item direction='row' justify='flex-end' alignItems='center' container>
+            <Grid style={{marginBottom:'2em'}} className={classes.firstSection} item direction={matchesSM ?'column': 'row'} justify='flex-end' alignItems='center' container>
 
 
                 <Grid style={{marginRight:'1em'}} className={classes.theLeadersContainer} item direction='column' container >
@@ -273,16 +417,16 @@ const AboutUs = (props) => {
                 </Grid>
 
 
-                <Grid className={classes.theLeadersContainer} item direction='column' container>
+                <Grid style={{marginRight: matchesSM ? '1em' :null}}  className={classes.theLeadersContainer} item direction='column' container>
                     <Grid item className={classes.theLeadersImgContainer}>
                         <img className={classes.theLeadersimg} alt='avatar of richards' src={thompson}  />
                     </Grid>
-                    <Grid item>Thompson</Grid>
+                    <Grid item>Thompson Smith</Grid>
                     <Grid item>Head of Finance</Grid>
                 </Grid>
             </Grid>
 
-            <Grid className={classes.firstSection} item direction='row' justify='flex-end' container>
+            <Grid className={classes.firstSection} item direction={matchesSM ?'column': 'row'} justify='flex-end' container>
 
 
                 <Grid style={{marginRight:'1em'}} className={classes.theLeadersContainer} item direction='column' container>
@@ -306,8 +450,7 @@ const AboutUs = (props) => {
         </Grid>
       </Grid>
 
-
-      <Grid container direction='row' alignItems='center' className={classes.Footer}>
+      <Grid container direction={ matchesSM ? 'column-reverse' : 'row'} alignItems='center' className={classes.Footer}>
             <Grid container item justify='center' className={classes.logoMainContainer}>
                 <Grid item className={classes.logoContainer}>
                 <img className={classes.logo} alt='arch logo in white' src={Logo} />
@@ -316,7 +459,7 @@ const AboutUs = (props) => {
                
             </Grid>
 
-            <Grid container item direction='row' alignItems='center'  className={classes.linksCOntainer}>
+            <Grid container item direction={matchesSM ? 'column' : 'row'} alignItems='center'  className={classes.linksCOntainer}>
             <Grid item className={classes.links} component={Link} to='/' onClick={props.homeLink}>
                     Home
                 </Grid>
