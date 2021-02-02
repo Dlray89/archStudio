@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Navigation from './components/UI/Navigation'
 import HomePage from "./components/HomePage";
 import Portfolio from "./components/Portfolio";
 import AboutUs from './components/aboutus'
 import Contact from './components/Contact'
-import { Link } from "@material-ui/core";
 
 function App() {
 

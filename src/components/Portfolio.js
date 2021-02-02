@@ -223,12 +223,12 @@ const useStyles = makeStyles((theme) => ({
 const Portfolio = (props) => {
     const classes = useStyles()
 
-    const navLinks = [
-        { id: 1, label: "Home", link: "/",},
-        { id: 1, label: "Portfolio", link: "/portfolio",},
-        { id: 1, label: "About Us", link: "/aboutus" },
-        { id: 1, label: "Contact", link: "contact" },
-      ];
+    // const navLinks = [
+    //     { id: 1, label: "Home", link: "/",},
+    //     { id: 1, label: "Portfolio", link: "/portfolio",},
+    //     { id: 1, label: "About Us", link: "/aboutus" },
+    //     { id: 1, label: "Contact", link: "contact" },
+    //   ];
     return(
         <div className={classes.portfolio}>
            
