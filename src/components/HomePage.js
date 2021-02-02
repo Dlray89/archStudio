@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import {
   makeStyles,
   Grid,
   Button,
   MobileStepper,
   useTheme,
+  Hidden,
+  useMediaQuery
 } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import Logo from '../assets/logo.svg'
 
 import paramour from "../assets/home/desktop/image-hero-paramour.jpg";
 import federal from "../assets/home/desktop/image-hero-federal.jpg";
@@ -55,6 +59,7 @@ const heroCards = [
 ];
 
 const useStyles = makeStyles((theme) => ({
+    
   homepage: {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -65,6 +70,14 @@ const useStyles = makeStyles((theme) => ({
     top: "15%",
     left: "8%",
     height: "30em",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      top:'8.8%',
+      left:0,
+      height:'32em',
+      backgroundSize: "55em",
+      backgroundPositionY: "60%",
+    }
   },
   headerTitle: {
     width: "35%",
@@ -75,6 +88,12 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     marginLeft: "3.4em",
     marginBottom: "0.15em",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      fontSize:'3.2em',
+      marginTop:'2em',
+      marginLeft:'2em'
+    }
   },
   headerSubtitle: {
     width: "30%",
@@ -83,11 +102,26 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "16em",
     fontSize: "0.75em",
     marginBottom: "0.85em",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      fontSize:'0.96em',
+      marginTop:'1em',
+      marginLeft:'6.2em',
+      width:'65%',
+    }
   },
   headerButtonContainer: {
     width: "30%",
     textAlign: "left",
     marginLeft: "12em",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      fontSize:'0.96em',
+      marginTop:'2em',
+      marginLeft:'6.2em',
+      width:'65%',
+    }
+    
   },
   headerButton: {
     background: "black",
@@ -114,6 +148,10 @@ const useStyles = makeStyles((theme) => ({
   mainWelcome: {
     margin: "0 auto",
     width: "80%",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%'
+    }
   },
   welcomeTitle: {
     fontSize: "9.5em",
@@ -134,6 +172,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0em",
     marginLeft: "6.5em",
     zIndex: 1,
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      marginBottom:'5em',
+      width:'100%'
+    }
   },
   archTitle: {
     textAlign: "left",
@@ -143,6 +186,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     marginBottom: "1em",
     marginTop: "1.2em",
+    [theme.breakpoints.down('sm')]:{
+      margin:'0 auto',
+      width:'75%',
+      fontSize:'2.3em',
+      textAlign:'center'
+    }
   },
   archSubtitle: {
     textAlign: "left",
@@ -150,9 +199,17 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     fontSize: "0.85em",
     marginBottom: "2em",
+    [theme.breakpoints.down('sm')]:{
+      margin:'0.55em auto',
+      width:'75%'
+    }
   },
   imgContainer: {
     marginLeft: "7.5em",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%'
+    }
   },
   img: {
     width: "100%",
@@ -163,7 +220,13 @@ const useStyles = makeStyles((theme) => ({
     width: "68%",
     marginLeft: "7em",
     marginTop: "7em",
-    height: '35em'
+    height: '35em',
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%',
+      backgroundSize:"45em",
+      height:'20em'
+    }
   },
   smallTeamTitle: {
     marginTop: "3.5em",
@@ -174,12 +237,23 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "4em",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 500,
+    [theme.breakpoints.down('sm')]:{
+      margin:'0 auto',
+      width:'65%',
+      fontSize:'2.5em',
+      marginTop:'2em',
+      marginBottom:"1em"
+    }
   },
   smallTeamButtonContainer: {
     textAlign: "left",
     marginLeft: "12em",
     width: "45%",
     marginTop: "1em",
+    [theme.breakpoints.down('sm')]:{
+      margin:'0 auto',
+      width:'65%'
+    }
   },
   smallTeamButton: {
     background: "black",
@@ -192,9 +266,19 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "7em",
     marginTop: "6em",
     marginBottom: "5em",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%'
+    }
   },
   featureContainer: {
     width: "100%",
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'80%',
+      marginTop:'2em',
+      
+    }
     
   },
   featureDelSolContainer: {
@@ -203,14 +287,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + delSol + ")",
     backgroundRepeat: "no-repeat",
     height: "35em",
-    marginRight: '2.92em'
+    marginRight: '2.92em',
+    [theme.breakpoints.down('sm')]:{
+      width:'79%',
+      margin:'0.95em auto',
+      height:'35em'
+    }
   },
   featurebTowerImgContainer: {
     
     width: "30%",
     backgroundImage: "url(" + BTower + ")",
     backgroundRepeat: "no-repeat",
-    marginRight: '2.9em'
+    marginRight: '2.9em',
+    [theme.breakpoints.down('sm')]:{
+      width:'79%',
+      margin:'0.95em auto',
+      height:'35em'
+    }
 
   },
   featureImgLePrototypeContainer: {
@@ -218,15 +312,25 @@ const useStyles = makeStyles((theme) => ({
     width: "30%",
     backgroundImage: "url(" + lePrototype + ")",
     backgroundRepeat: "no-repeat",
+    [theme.breakpoints.down('sm')]:{
+      width:'79%',
+      margin:'0.95em auto',
+      height:'35em'
+    }
   },
   featuresTitle: {
     color: "white",
     marginTop: "20em",
     fontWeight: 600,
-    
     textAlign: "left",
     marginLeft: "2em",
     fontFamily: "Spartan, sans-serif",
+    [theme.breakpoints.down('sm')]:{
+      width:'80%',
+      fontSize:"1em",
+      marginLeft:0
+    }
+    
   },
   featuresLinks: {
     color: "white",
@@ -235,6 +339,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "2.4em",
     fontFamily: "Spartan, sans-serif",
     fontSize: "0.85em",
+    [theme.breakpoints.down('sm')]:{
+      width:'80%',
+      margin:'0em auto',
+    }
   },
   numberOne: {
     color: "white",
@@ -268,28 +376,134 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     fontWeight: 600,
     marginTop:'0.55em',
-    marginBottom:'0.55em'
+    marginBottom:'0.55em',
+    [theme.breakpoints.down('sm')]:{
+      fontSize:'1.5em',
+    }
   },
   featureButtonContained:{
-
+    [theme.breakpoints.down('sm')]:{
+    }
   },
    featureButton:{
       background:'black',
-      color:'white'
+      color:'white',
+      [theme.breakpoints.down('sm')]:{
+        fontSize:'0.75em'
+      }
 
   },
   portcards:{
+  },
+  Footer:{
+    background:'#EEEFF4',
+    width:'62%',
+    marginLeft:'7em',
+    marginTop:'5em',
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%',
+      marginTop:'6em'
+    }
+},
+logoMainContainer:{
+    background:'black',
+    width:'15%',
+    boxSizing:'border-box',
+    height:'12em',
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'30%',
+      position:'absolute',
+      top:'204em',
+      height:'8em'
+    }
+
+},
+logoContainer:{
+},
+logo:{
+    marginTop:'4em',
+    [theme.breakpoints.down('sm')]:{
+      width:'5em',
+      marginTop:'2.7em'
+    }
+    
+   
+
+},
+linksCOntainer:{
+    width:'60%',
+    marginLeft:'3em',
+    marginTop:'2em',
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%',
+      marginTop:'5em',
+      marginBottom:'5em'
+    }
+},
+links:{
+    margin: 0,
+    height: '3em',
+    marginRight:'2em',
+    width:'20%',
+    fontFamily: 'Spartan, sans-serif',
+    fontWeight: 700,
+    fontSize:'0.75em',
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%',
+      textAlign:'center'
+    }
+
+},
+buttonMainContainer:{
+    width:'20%',
+    position:'absolute',
+    left:'63%',
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      width:'100%',
+      textAlign:'center',
+      marginTop:'3em',
+      left:0
+    }
+
+},
+buttonContainer:{
+    width:'100%',
+    [theme.breakpoints.down('sm')]:{
+      marginBottom:'1em',
+      
+    }
+
+},
+button:{
+    color:'white',
+    background:'black',
+    fontFamily: 'Spartan, sans-serif',
+
+},
+
+mobileStepper:{
+  marginTop: "4.8em",
+  background: "#EEEFF4",
+  [theme.breakpoints.down('sm')]:{
+    margin:0
   }
+}
 }));
 
-const HomePage = () => {
+const HomePage = (props) => {
   const classes = useStyles();
   const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
   //create state of active step here
   const [activeButton, setActiveButton] = useState(0);
   //set the max of herocards in the object array by using .length
   const maxStep = heroCards.length;
-
+ 
   const handleNext = () => {
     setActiveButton((prevActive) => prevActive + 1);
   };
@@ -302,8 +516,10 @@ const HomePage = () => {
   //       setActiveButton(steps)
   //   }
 
+ 
   return (
     <div>
+        
       <Grid
         container
         direction="column"
@@ -327,13 +543,16 @@ const HomePage = () => {
           </Grid>
 
           <Grid item className={classes.headerButtonContainer}>
-            <Button variant="contained" className={classes.headerButton}>
+            <Button onClick={props.portfolioLink} variant="contained" className={classes.headerButton} component={Link} to='/portfolio'>
               See Our Portfolio <ArrowRightAltIcon style={{ fill: "#FFF" }} />
             </Button>
           </Grid>
-
+          <Grid item className={classes.mobileStepperContainer}>
+          <Hidden mdDown>
+            
           <MobileStepper
-            style={{ marginTop: "4.8em", background: "#EEEFF4" }}
+          className={classes.mobileStepper}
+            
             steps={maxStep}
             position="static"
             variant="dots"
@@ -367,13 +586,18 @@ const HomePage = () => {
               </Button>
             }
           />
+
+</Hidden>
+</Grid>
         </div>
       </Grid>
 
       <Grid container className={classes.mainWelcome}>
+        <Hidden mdDown>
         <Grid item className={classes.welcomeTitle}>
           Welcome
         </Grid>
+        </Hidden>
 
         <Grid
           container
@@ -409,10 +633,11 @@ const HomePage = () => {
               the test of time.
             </Grid>
           </Grid>
-
+            <Hidden mdDown>
           <Grid item className={classes.imgContainer}>
             <img alt="welcome pic" className={classes.img} src={welcome} />
           </Grid>
+          </Hidden>
         </Grid>
       </Grid>
 
@@ -447,13 +672,13 @@ const HomePage = () => {
           <Grid item className={classes.featureHeader}>Featured</Grid>
 
           <Grid item className={classes.featureButtonContained}>
-            <Button variant="contained"  className={classes.featureButton}>
+            <Button onClick={props.portfolioLink} variant="contained"  className={classes.featureButton} component={Link} to='/portfolio'>
               See All <ArrowRightAltIcon />
             </Button>
           </Grid>
         </Grid>
 
-        <Grid item container direction="row"  className={classes.portcards}>
+        <Grid item container direction={matchesSM ? 'column': "row"}  className={classes.portcards}>
           <Grid
             item
             container
@@ -469,7 +694,7 @@ const HomePage = () => {
               <Grid item className={classes.featuresTitle}>
                 Project Del Sol
               </Grid>
-              <Grid item className={classes.featuresLinks}>
+              <Grid onClick={props.portfolioLink} item className={classes.featuresLinks} component={Link} to='/portfolio'>
                 View All Projects
               </Grid>
             </div>
@@ -490,7 +715,7 @@ const HomePage = () => {
               <Grid item className={classes.featuresTitle}>
                 228B Tower
               </Grid>
-              <Grid item className={classes.featuresLinks}>
+              <Grid onClick={props.portfolioLink} item className={classes.featuresLinks} component={Link} to='/portfolio'>
                 View All Projects
               </Grid>
             </div>
@@ -511,13 +736,48 @@ const HomePage = () => {
               <Grid item className={classes.featuresTitle}>
                 LePrototype
               </Grid>
-              <Grid item className={classes.featuresLinks}>
+              <Grid onClick={props.portfolioLink} item className={classes.featuresLinks} component={Link} to='/portfolio'>
                 View All Projects
               </Grid>
             </div>
           </Grid>
         </Grid>
       </Grid>
+
+      <Grid container direction={ matchesSM ? 'column-reverse' : 'row'} alignItems='center' className={classes.Footer}>
+            <Grid container item justify='center' className={classes.logoMainContainer}>
+                <Grid item className={classes.logoContainer}>
+                <img className={classes.logo} alt='arch logo in white' src={Logo} />
+
+                </Grid>
+               
+            </Grid>
+
+            <Grid container item direction={matchesSM ? 'column' : 'row'} alignItems='center'  className={classes.linksCOntainer}>
+            <Grid item className={classes.links} component={Link} to='/' onClick={props.homeLink}>
+                    Home
+                </Grid>
+                <Grid item className={classes.links} component={Link} to='/portfolio' onClick={props.portfolioLink}>
+                    Portfolio
+                </Grid>
+
+                <Grid item className={classes.links}component={Link} to='/aboutus'>
+                    About Us
+                </Grid>
+
+                <Grid item className={classes.links} component={Link} to='/contact'>
+                    Contact
+                </Grid>
+            </Grid>
+
+            <Grid container item className={classes.buttonMainContainer}>
+                <Grid item className={classes.buttonContainer}>
+                    <Button variant='contained' className={classes.button}>See our Portfolio</Button>
+                </Grid>
+            </Grid>
+
+
+        </Grid>
     </div>
   );
 };

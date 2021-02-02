@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Grid, makeStyles } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 import Logo from '../../assets/logoWhite.svg'
 
 
@@ -7,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     Footer:{
         background:'#EEEFF4',
         width:'75%',
-        marginLeft:'6.5em'
+        marginLeft:'6.8em',
+        marginTop:'110em'
     },
     logoMainContainer:{
         background:'black',
@@ -34,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight:'2em',
         width:'20%',
         fontFamily: 'Spartan, sans-serif',
-        fontWeight: 700
+        fontWeight: 700,
+        fontSize:'0.75em'
 
     },
     buttonMainContainer:{
@@ -58,40 +61,12 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const Footer = () => {
+const Footer = (props) => {
     const classes = useStyles()
     return(
-        <Grid container direction='row' alignItems='center' className={classes.Footer}>
-            <Grid container item justify='center' className={classes.logoMainContainer}>
-                <Grid item className={classes.logoContainer}>
-                <img className={classes.logo} alt='arch logo in white' src={Logo} />
-
-                </Grid>
-               
-            </Grid>
-
-            <Grid container item direction='row' alignItems='center'  className={classes.linksCOntainer}>
-                <Grid item className={classes.links}>
-                    Portfolio
-                </Grid>
-
-                <Grid item className={classes.links}>
-                    About Us
-                </Grid>
-
-                <Grid item className={classes.links}>
-                    Contact
-                </Grid>
-            </Grid>
-
-            <Grid container item className={classes.buttonMainContainer}>
-                <Grid item className={classes.buttonContainer}>
-                    <Button variant='contained' className={classes.button}>See our Portfolio</Button>
-                </Grid>
-            </Grid>
-
-
-        </Grid>
+       <div>
+           
+       </div>
     )
 }
 
