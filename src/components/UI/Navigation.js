@@ -159,9 +159,9 @@ const Navigation = () => {
     setOpen(true);
   };
 
-  // const menuClose = () => {
-  //   setOpen(false)
-  // }
+  const menuClose = () => {
+    setOpen(false)
+  }
 
   const deskTopNav = (
     <React.Fragment>
@@ -207,19 +207,19 @@ const Navigation = () => {
         onClose={() => setOpen(false)}
       >
         <List>
-          <ListItem button>
+          <ListItem component={Link}to='/' onClick={menuClose}>
             <ListItemText>Home</ListItemText>
           </ListItem>
 
-          <ListItem button>
+          <ListItem component={Link}to='portfolio' onClick={menuClose}>
             <ListItemText>Porfolio</ListItemText>
           </ListItem>
 
-          <ListItem button>
+          <ListItem component={Link}to='aboutus' onClick={menuClose}>
             <ListItemText>About Us</ListItemText>
           </ListItem>
 
-          <ListItem button>
+          <ListItem component={Link}to='contact' onClick={menuClose}>
             <ListItemText>Contact</ListItemText>
           </ListItem>
         </List>
