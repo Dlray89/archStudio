@@ -8,12 +8,7 @@ import {
   useTheme,
   useMediaQuery,
   IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  SwipeableDrawer,
   Hidden,
-  Card,
   AppBar,
   Toolbar,
   Button
@@ -168,13 +163,13 @@ const Navigation = () => {
     }
   }, [value]);
 
-  const menuOpen = () => {
-    setOpen(true);
-  };
+  // const menuOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const menuClose = () => {
-    setOpen(false)
-  }
+  // const menuClose = () => {
+  //   setOpen(false)
+  // }
 
   const deskTopNav = (
     <React.Fragment>
