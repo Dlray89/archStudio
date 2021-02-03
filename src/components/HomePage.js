@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPositionY: "5%",
     width: "68%",
     position: "absolute",
-    top: "15%",
+    top: "19%",
     left: "8%",
     height: "30em",
     [theme.breakpoints.down("sm")]: {

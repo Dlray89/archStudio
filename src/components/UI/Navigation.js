@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
   },
   portcontainerTwo: {
     width: "60%",
-    marginBottom: "14em",
+    marginBottom: "5em",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
@@ -185,8 +185,8 @@ const Navigation = () => {
           TabIndicatorProps={{
             style: {
               width: "12%",
-              marginLeft: "3em",
-              color: "#60636D",
+              marginLeft: "2.5em",
+              color: "#eeeff4",
             },
           }}
           value={value}
@@ -230,7 +230,7 @@ const Navigation = () => {
                       <Button onClick={navSwitchBack} >X</Button>
                       </Grid>
 
-                      <Grid item container direction='column' style={{ position:'absolute', top:'100%', left:'30%', width:'70%',  background:'white'}}>
+                      <Grid item container direction='column' style={{ position:'absolute', top:'100%', left:'30%', width:'70%',  background:'#eeeff4'}}>
                         
                           <Grid item component={Link} to='/' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Home</Button></Grid>
                           <Grid item component={Link} to='/portfolio' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Portfolio</Button></Grid>
@@ -290,11 +290,7 @@ const Navigation = () => {
                 </Grid>
 
                 <Grid item className={classes.portletters}>
-                  P
-                </Grid>
-
-                <Grid item className={classes.portletters}>
-                  O
+                  A
                 </Grid>
 
                 <Grid item className={classes.portletters}>
@@ -302,28 +298,17 @@ const Navigation = () => {
                 </Grid>
 
                 <Grid item className={classes.portletters}>
-                  T
+                  C
                 </Grid>
 
                 <Grid item className={classes.portletters}>
-                  F
+                  H
                 </Grid>
 
-                <Grid item className={classes.portletters}>
-                  O
-                </Grid>
+               
 
-                <Grid item className={classes.portletters}>
-                  L
-                </Grid>
+               
 
-                <Grid item className={classes.portletters}>
-                  I
-                </Grid>
-
-                <Grid item className={classes.portletters}>
-                  O
-                </Grid>
               </Grid>
             </Hidden>
           </Grid>
@@ -360,21 +345,28 @@ const Navigation = () => {
                   <br /> |
                 </Grid>
 
-                <Grid item className={classes.letters}>
+                <Grid item className={classes.portletters}>
+                  A
+                </Grid>
+
+                <Grid item className={classes.portletters}>
+                  R
+                </Grid>
+
+                <Grid item className={classes.portletters}>
+                  C
+                </Grid>
+
+                <Grid item className={classes.portletters}>
                   H
                 </Grid>
 
-                <Grid item className={classes.letters}>
-                  O
-                </Grid>
+               
 
-                <Grid item className={classes.letters}>
-                  M
-                </Grid>
+              
 
-                <Grid item className={classes.letters}>
-                  E
-                </Grid>
+                
+           
               </Grid>
             </Hidden>
           </Grid>
