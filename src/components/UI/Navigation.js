@@ -13,6 +13,10 @@ import {
   ListItemText,
   SwipeableDrawer,
   Hidden,
+  Card,
+  AppBar,
+  Toolbar,
+  Button
 } from "@material-ui/core";
 import Logo from "../../assets/logo.svg";
 
@@ -120,12 +124,21 @@ const Navigation = () => {
   const routes = ["/", "/portfolio", "/aboutus", "/contact"];
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
+  const [switchNav, setSwitch] = useState(false)
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleValue = (e, newValue) => {
     setValue(newValue);
   };
+
+  const navSwitch = () => {
+    setSwitch(true)
+  }
+
+  const navSwitchBack = () => {
+    setSwitch(false)
+  }
 
   useEffect(() => {
     switch (window.location.pathname) {
@@ -177,7 +190,7 @@ const Navigation = () => {
           TabIndicatorProps={{
             style: {
               width: "12%",
-              marginLeft: "2.5em",
+              marginLeft: "3em",
               color: "#60636D",
             },
           }}
@@ -201,33 +214,50 @@ const Navigation = () => {
 
   const mobileNav = (
     <React.Fragment>
-      <SwipeableDrawer
-        open={open}
-        onOpen={() => setOpen(true)}
-        onClose={() => setOpen(false)}
-      >
-        <List>
-          <ListItem component={Link}to='/' onClick={menuClose}>
-            <ListItemText>Home</ListItemText>
-          </ListItem>
+      <AppBar style={{background:'white', zIndex:1}}>
+        <Toolbar>
+        <Grid
+            item
+            container
+            direction="row"
+            justify="space-between"
+            style={{width:'100%', padding:'1%'}}
+          >
+            <Grid item className={classes.imgCOntainer} style={{margin:0, padding:0, marginTop:'0.45em'}}>
+              <img style={{margin:0, width:'5em'}} className={classes.logo} alt="logo of Arch" src={Logo} />
+            </Grid>
+            
 
-          <ListItem component={Link}to='portfolio' onClick={menuClose}>
-            <ListItemText>Porfolio</ListItemText>
-          </ListItem>
+              <Grid item>
+                {switchNav ? (
+                    <Grid container direction='column'>
+                      <Grid item>
+                      <Button onClick={navSwitchBack} >X</Button>
+                      </Grid>
 
-          <ListItem component={Link}to='aboutus' onClick={menuClose}>
-            <ListItemText>About Us</ListItemText>
-          </ListItem>
+                      <Grid item container direction='column' style={{ position:'absolute', top:'100%', left:'30%', width:'70%',  background:'white'}}>
+                        
+                          <Grid item component={Link} to='/' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Home</Button></Grid>
+                          <Grid item component={Link} to='/portfolio' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Portfolio</Button></Grid>
+                          <Grid item component={Link} to='/aboutus' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>About Us</Button></Grid>
+                          <Grid item component={Link} to='/contact' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Contact</Button></Grid>
+                     
+                      </Grid>
 
-          <ListItem component={Link}to='contact' onClick={menuClose}>
-            <ListItemText>Contact</ListItemText>
-          </ListItem>
-        </List>
-      </SwipeableDrawer>
-
-      <IconButton onClick={menuOpen}>
+                    </Grid>
+                ) : (
+                  <IconButton onClick={navSwitch}>
         <MenuIcon />
       </IconButton>
+                )}
+              
+              </Grid>
+           
+          </Grid>
+          
+        </Toolbar>
+      </AppBar>
+     
     </React.Fragment>
   );
 
@@ -353,7 +383,7 @@ const Navigation = () => {
               </Grid>
             </Hidden>
           </Grid>
-
+          
           <Grid
             item
             container
@@ -364,7 +394,10 @@ const Navigation = () => {
             <Grid item className={classes.imgCOntainer}>
               <img className={classes.logo} alt="logo of Arch" src={Logo} />
             </Grid>
-            <Grid item>{matchesSM ? mobileNav : deskTopNav}</Grid>
+            
+
+              <Grid item>{matchesSM ? mobileNav : deskTopNav}</Grid>
+           
           </Grid>
         </Grid>
       )}

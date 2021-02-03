@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]:{
      
       left: 0,
-      width:'99%',
-      top:'10%'
+      width:'100%',
+      top:'9%'
     }
   },
   firstContainer: {
@@ -65,8 +65,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]:{
       left:0,
       width:'90%',
-      height:'20em',
-      top:'14%'
+      height:'17em',
+      position:"inherit",
+      marginTop:'-7em'
     }
   },
   textTitle: {
@@ -112,7 +113,9 @@ const useStyles = makeStyles((theme) => ({
   ourHeritage: {
     width: "50%",
     [theme.breakpoints.down('sm')]:{
-      width:'100%',
+      width:'101%',
+      marginTop:'-13em',
+      boxSizing:"border-box"
 
      
     }
@@ -144,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
       width:'80%',
       fontSize:'1em',
       margin:0,
-      marginTop:'0.55em',
+      marginTop:'1.2em',
       textAlign:'center',
       fontWeight:500,
     }
@@ -215,13 +218,13 @@ const useStyles = makeStyles((theme) => ({
  
 Footer:{
   background:'#EEEFF4',
-  width:'62%',
-  marginLeft:'7em',
+  width:'85%',
+  marginLeft:'5em',
   marginTop:'5em',
   [theme.breakpoints.down('sm')]:{
     margin:0,
-    width:'100%',
-    marginTop:'6em'
+    width:'101%',
+    marginTop:'10em'
   }
 },
 logoMainContainer:{
@@ -232,9 +235,13 @@ logoMainContainer:{
   [theme.breakpoints.down('sm')]:{
     margin:0,
     width:'30%',
-    position:'absolute',
-    top:'175em',
-    height:'8em'
+    height:'8em',
+    position:'inherit',
+    marginTop:'-3em'
+    
+  },
+  [theme.breakpoints.down('xs')]:{
+    top:'165em'
   }
 
 },
@@ -258,7 +265,7 @@ linksCOntainer:{
     margin:0,
     width:'100%',
     marginTop:'5em',
-    marginBottom:'5em'
+    marginBottom:'1em'
   }
 },
 links:{
@@ -279,14 +286,16 @@ links:{
 buttonMainContainer:{
   width:'20%',
   position:'absolute',
-  left:'63%',
+  left:'81%',
   [theme.breakpoints.down('sm')]:{
     margin:0,
     width:'100%',
     textAlign:'center',
-    marginTop:'3em',
-    left:0
-  }
+    marginTop:'0em',
+    left:0,
+    position:'static'
+  },
+  
 
 },
 buttonContainer:{
@@ -450,7 +459,7 @@ const AboutUs = (props) => {
         </Grid>
       </Grid>
 
-      <Grid container direction={ matchesSM ? 'column-reverse' : 'row'} alignItems='center' className={classes.Footer}>
+      <Grid container direction={ matchesSM ? 'column' : 'row'} alignItems='center' className={classes.Footer}>
             <Grid container item justify='center' className={classes.logoMainContainer}>
                 <Grid item className={classes.logoContainer}>
                 <img className={classes.logo} alt='arch logo in white' src={Logo} />
