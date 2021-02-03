@@ -209,7 +209,7 @@ const Navigation = () => {
 
   const mobileNav = (
     <React.Fragment>
-      <AppBar style={{background:'white', zIndex:1}}>
+      <AppBar style={{background:'white'}}>
         <Toolbar>
         <Grid
             item
