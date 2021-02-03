@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "3em",
   },
   linksContainer: {
-    width: "80%",
+    width: "100%",
   },
   links: {
     fontFamily: "Spartan, sans-serif",

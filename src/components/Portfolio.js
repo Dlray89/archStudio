@@ -282,6 +282,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     fontWeight: 700,
     fontSize: "0.75em",
+    textDecoration:'none',
+    color:'black',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
