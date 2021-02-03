@@ -324,7 +324,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Portfolio = (props) => {
+const Portfolio = () => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -688,7 +688,6 @@ const Portfolio = (props) => {
             className={classes.links}
             component={Link}
             to="/"
-            onClick={props.homeLink}
           >
             Home
           </Grid>
@@ -697,7 +696,6 @@ const Portfolio = (props) => {
             className={classes.links}
             component={Link}
             to="/portfolio"
-            onClick={props.portfolioLink}
           >
             Portfolio
           </Grid>

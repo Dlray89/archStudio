@@ -476,7 +476,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HomePage = (props) => {
+const HomePage = () => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -523,7 +523,7 @@ const HomePage = (props) => {
 
           <Grid item className={classes.headerButtonContainer}>
             <Button
-              onClick={props.portfolioLink}
+              
               variant="contained"
               className={classes.headerButton}
               component={Link}
@@ -663,7 +663,7 @@ const HomePage = (props) => {
 
           <Grid item className={classes.featureButtonContained}>
             <Button
-              onClick={props.portfolioLink}
+              
               variant="contained"
               className={classes.featureButton}
               component={Link}
@@ -700,7 +700,7 @@ const HomePage = (props) => {
                 Project Del Sol
               </Grid>
               <Grid
-                onClick={props.portfolioLink}
+                
                 item
                 className={classes.featuresLinks}
                 component={Link}
@@ -731,7 +731,7 @@ const HomePage = (props) => {
                 228B Tower
               </Grid>
               <Grid
-                onClick={props.portfolioLink}
+                
                 item
                 className={classes.featuresLinks}
                 component={Link}
@@ -762,7 +762,7 @@ const HomePage = (props) => {
                 LePrototype
               </Grid>
               <Grid
-                onClick={props.portfolioLink}
+                
                 item
                 className={classes.featuresLinks}
                 component={Link}
@@ -804,7 +804,6 @@ const HomePage = (props) => {
             className={classes.links}
             component={Link}
             to="/"
-            onClick={props.homeLink}
           >
             Home
           </Grid>
@@ -813,7 +812,7 @@ const HomePage = (props) => {
             className={classes.links}
             component={Link}
             to="/portfolio"
-            onClick={props.portfolioLink}
+            
           >
             Portfolio
           </Grid>
