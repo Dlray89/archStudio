@@ -118,7 +118,7 @@ const Navigation = () => {
   const useLocationPath = useLocation().pathname;
   const routes = ["/", "/portfolio", "/aboutus", "/contact"];
   const [value, setValue] = useState(0);
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [switchNav, setSwitch] = useState(false)
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
