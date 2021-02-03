@@ -7,6 +7,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
+  Hidden
 } from "@material-ui/core";
 import heroImg from "../assets/contact/desktop/image-hero.jpg";
 import mapImg from "../assets/contact/desktop/image-map.png";
@@ -17,9 +18,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-35em",
     width: "80%",
     marginLeft: "7em",
+    [theme.breakpoints.down('sm')]:{
+        margin:0,
+        marginTop:'-36em',
+        width:'100%'
+    }
   },
   heroCard: {
     width: "41em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0
+    }
   },
   heroImg: {
     width: "100%",
@@ -38,57 +48,131 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-44%",
     background: "white",
     marginLeft: "28em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        width:'90%',
+        marginTop:'-17em'
+    }
   },
   tellMeMoreTitle: {
     marginTop: "3em",
     fontSize: "3.2em",
     width: "60%",
     margin: " 0 auto",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:'0.45em auto',
+        fontSize:'2.2em',
+        width:'65%',
+        
+    }
   },
   tellMeMoreSubtitle: {
     width: "60%",
     margin: " 0 auto",
     marginTop: "1em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:'0 auto',
+        width:'65%'
+    }
   },
   contactDetailsContainer: {
     marginTop: "5em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        marginTop:'3em'
+    }
   },
   contactDetailsTitle: {
     fontSize: "2.3em",
     width: "18%",
     marginRight: "auto",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        width:'50%',
+        textAlign:'center',
+        fontSize:'2.2em',
+    }
   },
   mainOfficeContainer: {
     width: "40%",
     textAlign: "center",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        width:'50%'
+    }
   },
   mainOfficetitle: {
     fontWeight: 500,
     marginBottom: "1em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        fontSize:'1.1em',
+        marginBottom:'0.95em',
+        marginTop:'0.95em'
+    }
   },
   officeTwoContainer: {
     width: "40%",
     textAlign: "center",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        width:'50%'
+    }
   },
   officeTwoTitlle: {
     fontWeight: 500,
     marginBottom: "1em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        fontSize:'1.1em',
+        marginBottom:'0.95em',
+        marginTop:'0.95em'
+    }
   },
   contactInfo: {
     marginBottom: "0.36em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        marginBottom:'0.65em',
+        fontSize:'0.75em'
+    }
   },
   viewMapContainer: {
     width: "100%",
     marginBottom: "1em",
     marginTop: "1em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0
+    }
   },
   viewMapButton: {
     background: "black",
     color: "white",
     width: "45%",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        width:'100%'
+    }
   },
   map: {
     marginTop: "3em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        marginTop:'3em'
+    }
   },
   mapImgContainer: {},
   mapImg: {
@@ -96,10 +180,24 @@ const useStyles = makeStyles((theme) => ({
   },
   connectWithUsContainer: {
     marginTop: "5em",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        marginTop:'1em'
+    }
   },
   connectWithUsTitle: {
     fontSize: "3em",
     width: "20%",
+    [theme.breakpoints.down('sm')]:{
+        
+        margin:0,
+        width:'40%',
+        marginBottom:'1em',
+        textAlign:'center',
+        fontSize:'2.2em',
+        marginTop:'1em'
+    }
   },
   textFields: {
     width: "70%",
@@ -245,10 +343,11 @@ const Contact = (props) => {
         <Grid item className={classes.heroCard}>
           <img className={classes.heroImg} alt="anology phone" src={heroImg} />
         </Grid>
-
+    <Hidden mdDown>
         <Grid item className={classes.heroTitle}>
           Contact
         </Grid>
+        </Hidden>
       </Grid>
 
       <Grid
@@ -271,7 +370,7 @@ const Contact = (props) => {
       <Grid
         item
         container
-        direction="row"
+        direction={matchesSM ? "column":"row"}
         alignItems="center"
         className={classes.contactDetailsContainer}
       >
@@ -347,7 +446,7 @@ const Contact = (props) => {
       <Grid
         item
         container
-        direction="row"
+        direction={matchesSM ? "column":"row"}
         justify="space-between"
         alignItems="center"
         className={classes.connectWithUsContainer}
@@ -381,11 +480,9 @@ const Contact = (props) => {
 
           <Grid item className={classes.TextFieldContainer}>
             <TextField
-              multiline
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              rows={4}
               className={classes.inputfields}
               placeholder="Message"
             />
