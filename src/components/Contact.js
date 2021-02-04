@@ -488,7 +488,7 @@ const Contact = () => {
         center={mainOffice}
         zoom={13}
         scrollWheelZoom={false}
-        style={{width:'100%', border:'solid 2px red'}}
+        style={{width:'100%'}}
         
         >
           <TileLayer
