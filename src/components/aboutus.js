@@ -197,11 +197,32 @@ const useStyles = makeStyles((theme) => ({
       margin: 0,
     },
   },
+  theLeadersImgContainer:{
+    [theme.breakpoints.down('sm')]:{
+      height:'25em',
+      width:"100%",
+    }
+  },
 
   theLeadersimg: {
     width: "100%",
     [theme.breakpoints.down("sm")]: {
-      width: "99%",
+      width: "100%",
+      marginBottom:'2em',
+      height:'100%',
+      margin: '0 auto'
+
+
+    },
+  },
+  leadersName:{
+    [theme.breakpoints.down("sm")]: {
+      textAlign:'center'
+    },
+  },
+  leaderPosition:{
+    [theme.breakpoints.down("sm")]: {
+      textAlign:'center'
     },
   },
 
@@ -428,8 +449,8 @@ const AboutUs = (props) => {
                     src={jake}
                   />
                 </Grid>
-                <Grid item>Jake Richards</Grid>
-                <Grid item>Chief Architect</Grid>
+                <Grid item className={classes.leadersName}>Jake Richards</Grid>
+                <Grid item className={classes.leaderPosition}>Chief Architect</Grid>
               </Grid>
 
               <Grid
@@ -446,8 +467,8 @@ const AboutUs = (props) => {
                     src={thompson}
                   />
                 </Grid>
-                <Grid item>Thompson Smith</Grid>
-                <Grid item>Head of Finance</Grid>
+                <Grid item className={classes.leadersName}>Thompson Smith</Grid>
+                <Grid item className={classes.leaderPosition}>Head of Finance</Grid>
               </Grid>
             </Grid>
 
@@ -472,8 +493,8 @@ const AboutUs = (props) => {
                     src={jacjson}
                   />
                 </Grid>
-                <Grid item>Jackson Rourke</Grid>
-                <Grid item>Lead Designer</Grid>
+                <Grid item className={classes.leadersName}>Jackson Rourke</Grid>
+                <Grid item className={classes.leaderPosition}>Lead Designer</Grid>
               </Grid>
 
               <Grid
@@ -489,8 +510,8 @@ const AboutUs = (props) => {
                     src={maria}
                   />
                 </Grid>
-                <Grid item>Maria Simpson</Grid>
-                <Grid item>Senior Architect</Grid>
+                <Grid item className={classes.leadersName}>Maria Simpson</Grid>
+                <Grid item className={classes.leaderPosition}>Senior Architect</Grid>
               </Grid>
             </Grid>
           </Grid>
