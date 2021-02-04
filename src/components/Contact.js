@@ -12,6 +12,9 @@ import {
 import heroImg from "../assets/contact/desktop/image-hero.jpg";
 import mapImg from "../assets/contact/desktop/image-map.png";
 import Logo from "../assets/logoWhite.svg";
+import GoogleMaps from 'google-map-react'
+import { MapContainter } from './UI/maps'
+
 
 const useStyles = makeStyles((theme) => ({
   contact: {
@@ -309,6 +312,13 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [emailHelper, setEmailHelper] = useState("");
   const [message, setMessage] = useState("");
+  const [maps, setMaps] = useState({
+     center:{
+         lat: 59.95,
+         lng: 30.33
+     },
+     zoom: 11
+  })
 
   const onValidation = (e) => {
     let valid;
@@ -435,6 +445,10 @@ const Contact = () => {
             </Button>
           </Grid>
         </Grid>
+      </Grid>
+
+      <Grid item>
+         <MapContainter  />
       </Grid>
 
       <Grid item container className={classes.map}>

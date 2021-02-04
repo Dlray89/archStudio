@@ -62,13 +62,12 @@ const useStyles = makeStyles((theme) => ({
   homepage: {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    backgroundSize: "65em",
+    backgroundSize: "75em",
     backgroundPositionY: "5%",
-    width: "68%",
-    position: "absolute",
-    top: "19%",
-    left: "8%",
-    height: "30em",
+    width: "80%",
+    marginTop:'-35em',
+    
+    marginLeft:'7em',
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       top: "9%",
@@ -142,10 +141,13 @@ const useStyles = makeStyles((theme) => ({
       background: "#EEEFF4",
       color: "black",
     },
+
   },
   mainWelcome: {
-    margin: "0 auto",
     width: "80%",
+    
+    marginTop:'6em',
+    marginLeft:'7em',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -154,22 +156,23 @@ const useStyles = makeStyles((theme) => ({
   welcomeTitle: {
     fontSize: "9.5em",
     width: "60%",
-    position: "absolute",
-    top: "4.1em",
-    left: "0.49em",
+    marginBottom:'-2em',
     color: "#EEEFF4",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 900,
+    zIndex:1
   },
   welcomeToArchContainer: {
     width: "100%",
     margin: "0 auto",
   },
   archContainer: {
-    width: "30%",
-    marginTop: "0em",
-    marginLeft: "6.5em",
+    width: "40%",
+    
     zIndex: 1,
+    marginLeft:'8em',
+    marginTop:'10em',
+    height:'35em',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       marginBottom: "5em",
@@ -182,8 +185,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     width: "95%",
     margin: "0 auto",
-    marginBottom: "1em",
-    marginTop: "1.2em",
+    marginTop:'1.5em',
+    marginBottom: "2.4em",
     [theme.breakpoints.down("sm")]: {
       margin: "0 auto",
       width: "75%",
@@ -196,14 +199,15 @@ const useStyles = makeStyles((theme) => ({
     width: "95%",
     margin: "0 auto",
     fontSize: "0.85em",
-    marginBottom: "2em",
+    marginBottom: "1.5em",
     [theme.breakpoints.down("sm")]: {
       margin: "0.55em auto",
       width: "75%",
     },
   },
   imgContainer: {
-    marginLeft: "7.5em",
+    width:'40%',
+    height:'100%',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -211,11 +215,12 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     width: "100%",
+    height:'100%'
   },
   smallTeam: {
     background: "url(" + smallTeam + ")",
     backgroundRepeat: "no-repeat",
-    width: "68%",
+    width: "80%",
     marginLeft: "7em",
     marginTop: "7em",
     height: "35em",
@@ -227,12 +232,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   smallTeamTitle: {
-    marginTop: "3.5em",
+    marginTop: "2.5em",
     color: "white",
-    fontSize: "3em",
+    fontSize: "4.5em",
     textAlign: "left",
-    width: "40%",
-    marginLeft: "4em",
+    width: "50%",
+    marginLeft: "3.5em",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 500,
     [theme.breakpoints.down("sm")]: {
@@ -245,7 +250,7 @@ const useStyles = makeStyles((theme) => ({
   },
   smallTeamButtonContainer: {
     textAlign: "left",
-    marginLeft: "12em",
+    marginLeft: "16em",
     width: "45%",
     marginTop: "1em",
     [theme.breakpoints.down("sm")]: {
@@ -258,12 +263,19 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 500,
+    width:'70%',
+    fontSize:'1em',
+    '&:hover':{
+        background:'eeeff4',
+        color:"black",
+    }
   },
   featureMainContainer: {
-    width: "68%",
+    width: "80%",
     marginLeft: "7em",
     marginTop: "6em",
     marginBottom: "5em",
+    
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -282,7 +294,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + delSol + ")",
     backgroundRepeat: "no-repeat",
     height: "35em",
-    marginRight: "2.92em",
+    marginRight: "3.4em",
     [theme.breakpoints.down("sm")]: {
       width: "79%",
       margin: "0.95em auto",
@@ -293,7 +305,7 @@ const useStyles = makeStyles((theme) => ({
     width: "30%",
     backgroundImage: "url(" + BTower + ")",
     backgroundRepeat: "no-repeat",
-    marginRight: "2.9em",
+    marginRight: "3.4em",
     [theme.breakpoints.down("sm")]: {
       width: "79%",
       margin: "0.95em auto",
@@ -385,7 +397,7 @@ const useStyles = makeStyles((theme) => ({
   portcards: {},
   Footer: {
     background: "#EEEFF4",
-    width: "62%",
+    width: "72%",
     marginLeft: "7em",
     marginTop: "5em",
     [theme.breakpoints.down("sm")]: {
@@ -445,7 +457,7 @@ const useStyles = makeStyles((theme) => ({
   buttonMainContainer: {
     width: "20%",
     position: "absolute",
-    left: "63%",
+    left: "73%",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -466,10 +478,16 @@ const useStyles = makeStyles((theme) => ({
     background: "black",
     fontFamily: "Spartan, sans-serif",
   },
+  mobileStepperContainer:{
+    
+    width:'80%',
+    margin:'0 auto',
+    marginLeft:'7em'
+  },
 
   mobileStepper: {
-    marginTop: "4.8em",
     background: "#EEEFF4",
+    
     [theme.breakpoints.down("sm")]: {
       margin: 0,
     },
@@ -503,6 +521,7 @@ const HomePage = () => {
         container
         direction="column"
         justify="flex-start"
+        alignItems='center'
         className={classes.homepage}
         style={{ backgroundImage: "url(" + heroCards[activeButton].img + ")" }}
       >
@@ -532,7 +551,10 @@ const HomePage = () => {
               See Our Portfolio <ArrowRightAltIcon style={{ fill: "#FFF" }} />
             </Button>
           </Grid>
-          <Grid item className={classes.mobileStepperContainer}>
+         
+        </div>
+      </Grid>
+      <Grid item className={classes.mobileStepperContainer}>
             <Hidden mdDown>
               <MobileStepper
                 className={classes.mobileStepper}
@@ -571,8 +593,7 @@ const HomePage = () => {
               />
             </Hidden>
           </Grid>
-        </div>
-      </Grid>
+      
 
       <Grid container className={classes.mainWelcome}>
         <Hidden mdDown>
@@ -584,6 +605,8 @@ const HomePage = () => {
         <Grid
           container
           direction="row"
+          justify='space-between'
+          alignItems='center'
           className={classes.welcomeToArchContainer}
         >
           <Grid
