@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents} from 'react-leaflet'
 import heroImg from "../assets/contact/desktop/image-hero.jpg";
-import mapImg from "../assets/contact/desktop/image-map.png";
+// import mapImg from "../assets/contact/desktop/image-map.png";
 import Logo from "../assets/logoWhite.svg";
 
 
@@ -337,8 +337,8 @@ const Contact = () => {
         map.locate()
       },
       locationfound(e) {
-        setPosition(e.latlng)
-        map.flyTo(e.latlng, map.getZoom())
+        setPosition(mainOffice)
+        map.flyTo(mainOffice, map.getZoom())
       },
     })
 
