@@ -25,14 +25,14 @@ import trinity from "../assets/portfolio/desktop/image-trinity.jpg";
 
 const useStyles = makeStyles((theme) => ({
   portfolio: {
-    position: "absolute",
-    top: "25%",
-    left: "8%",
-    width: "75%",
+   
+    width: "87%",
+    marginTop:'-125em',
+    marginLeft:'6.5em',
     [theme.breakpoints.down("sm")]: {
       width: "99%",
-      left: 0,
-      top: "10%",
+      marginTop:'-123.5em',
+      margin:0
     },
   },
   mainGridContainer: {},
@@ -63,8 +63,8 @@ const useStyles = makeStyles((theme) => ({
   seraph: {
     backgroundImage: "url(" + seraph + ")",
     backgroundRepeat: "no-repeat",
-    marginRight: "3.5em",
-    width: "30%",
+    marginRight: "5em",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + eeBox + ")",
     backgroundRepeat: "no-repeat",
     marginRight: "auto",
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   federal: {
     backgroundImage: "url(" + federalimg + ")",
     backgroundRepeat: "no-repeat",
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -101,8 +101,8 @@ const useStyles = makeStyles((theme) => ({
   delSol: {
     backgroundImage: "url(" + delSol + ")",
     backgroundRepeat: "no-repeat",
-    marginRight: "3.5em",
-    width: "30%",
+    marginRight: "5em",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + prototype + ")",
     backgroundRepeat: "no-repeat",
     marginRight: "auto",
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -128,7 +128,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + bTowers + ")",
     backgroundRepeat: "no-repeat",
 
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -140,8 +140,8 @@ const useStyles = makeStyles((theme) => ({
   edelweiss: {
     backgroundImage: "url(" + edelweiss + ")",
     backgroundRepeat: "no-repeat",
-    marginRight: "3.5em",
-    width: "30%",
+    marginRight: "5em",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + netcry + ")",
     backgroundRepeat: "no-repeat",
     marginRight: "auto",
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -167,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + hypers + ")",
     backgroundRepeat: "no-repeat",
 
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -179,8 +179,8 @@ const useStyles = makeStyles((theme) => ({
   sxiv: {
     backgroundImage: "url(" + sxiv + ")",
     backgroundRepeat: "no-repeat",
-    marginRight: "3.5em",
-    width: "30%",
+    marginRight: "5em",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -193,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + trinity + ")",
     backgroundRepeat: "no-repeat",
     marginRight: "auto",
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {
@@ -206,7 +206,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + paramour + ")",
     backgroundRepeat: "no-repeat",
 
-    width: "30%",
+    width: "29%",
     height: "30em",
     textDecoration: "none",
     [theme.breakpoints.down("sm")]: {

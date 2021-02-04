@@ -70,9 +70,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft:'7em',
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      top: "9%",
-      left: 0,
-      height: "30em",
+     marginTop:'-36em',
+     margin:0,
       backgroundSize: "55em",
       backgroundPositionY: "60%",
     },
@@ -151,6 +150,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
+      height:"25em"
     },
   },
   welcomeTitle: {
@@ -175,7 +175,6 @@ const useStyles = makeStyles((theme) => ({
     height:'35em',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      marginBottom: "5em",
       width: "100%",
     },
   },
@@ -188,7 +187,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop:'1.5em',
     marginBottom: "2.4em",
     [theme.breakpoints.down("sm")]: {
-      margin: "0 auto",
+      margin: "0.55em auto",
       width: "75%",
       fontSize: "2.3em",
       textAlign: "center",
@@ -332,7 +331,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       fontSize: "1em",
-      marginLeft: 0,
+      
+      marginLeft:'1em'
     },
   },
   featuresLinks: {
@@ -345,6 +345,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       margin: "0em auto",
+      marginLeft:'1em'
     },
   },
   numberOne: {

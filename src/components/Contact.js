@@ -9,11 +9,11 @@ import {
   useMediaQuery,
   Hidden
 } from "@material-ui/core";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents} from 'react-leaflet'
 import heroImg from "../assets/contact/desktop/image-hero.jpg";
 import mapImg from "../assets/contact/desktop/image-map.png";
 import Logo from "../assets/logoWhite.svg";
-import GoogleMaps from 'google-map-react'
-import { MapContainter } from './UI/maps'
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -171,8 +171,10 @@ const useStyles = makeStyles((theme) => ({
   },
   map: {
     marginTop: "3em",
+    width:'100%',
+    height:'35em',
     [theme.breakpoints.down('sm')]:{
-        
+        height:'30em',
         margin:0,
         marginTop:'3em'
     }
@@ -304,6 +306,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const mainOffice = [35.952461, -83.991531]
+const officeII = [29.897430, -97.827510]
+
 const Contact = () => {
   const classes = useStyles();
   const theme = useTheme();
@@ -312,13 +317,42 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [emailHelper, setEmailHelper] = useState("");
   const [message, setMessage] = useState("");
-  const [maps, setMaps] = useState({
-     center:{
-         lat: 59.95,
-         lng: 30.33
-     },
-     zoom: 11
-  })
+  const [position, setPosition] = useState(null)
+  const [officePosition, setOfficePosition] = useState(false)
+
+  const mainOfficeLatLng = () => {
+    setOfficePosition(false)
+    setPosition(mainOffice)
+  }
+
+  const officetwo = () => {
+    setOfficePosition(true)
+    setPosition(officeII)
+  }
+  
+  
+  const LocationMarkey = () => {
+    const map = useMapEvents({
+      click() {
+        map.locate()
+      },
+      locationfound(e) {
+        setPosition(e.latlng)
+        map.flyTo(e.latlng, map.getZoom())
+      },
+    })
+
+    return position === null ? null : (
+
+      <Marker position={position }>
+      <Popup>You are here</Popup>
+    </Marker>
+    )
+  }
+
+  
+
+  
 
   const onValidation = (e) => {
     let valid;
@@ -410,7 +444,7 @@ const Contact = () => {
             Phone: 123-456-3451
           </Grid>
           <Grid item className={classes.viewMapContainer}>
-            <Button className={classes.viewMapButton} variant="contained">
+            <Button onClick={mainOfficeLatLng} className={classes.viewMapButton} variant="contained">
               View on Map
             </Button>
           </Grid>
@@ -440,21 +474,38 @@ const Contact = () => {
             Phone: 832-123-4321
           </Grid>
           <Grid item className={classes.viewMapContainer}>
-            <Button className={classes.viewMapButton} variant="contained">
+            <Button onClick={officetwo} className={classes.viewMapButton} variant="contained">
               View on Map
             </Button>
           </Grid>
         </Grid>
       </Grid>
 
-      <Grid item>
-         <MapContainter  />
-      </Grid>
+      
 
       <Grid item container className={classes.map}>
-        <Grid item className={classes.mapImgContainer}>
-          <img className={classes.mapImg} alt="map " src={mapImg} />
-        </Grid>
+        <MapContainer
+        center={mainOffice}
+        zoom={13}
+        scrollWheelZoom={false}
+        style={{width:'100%', border:'solid 2px red'}}
+        
+        >
+          <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'  />
+           {officePosition ?
+           <Marker position={officeII}>
+           second Office
+         </Marker> :
+         <Marker position={mainOffice}>
+         Main Office
+       </Marker>
+           
+          }
+           
+             <LocationMarkey  />
+        </MapContainer>
       </Grid>
 
       <Grid
