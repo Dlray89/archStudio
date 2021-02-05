@@ -205,12 +205,10 @@ const useStyles = makeStyles((theme) => ({
   },
   archContainer: {
     width: "40%",
-    
     zIndex: 1,
     marginLeft:'8em',
     marginTop:'10em',
     height:'35em',
-  
     
     [theme.breakpoints.down("md")]: {
       margin: 0,
@@ -219,18 +217,18 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "98%",
+      width: "100%",
       height:'30em'
     },
   },
   archTitle: {
-    textAlign: "left",
-    fontSize: "2.8em",
+    textAlign: "center",
+    fontSize: "3em",
     fontWeight: 500,
-    width: "95%",
+    width: "80%",
     margin: "0 auto",
-    marginTop:'1.5em',
-    marginBottom: "2.4em",
+    marginTop:'1em',
+    marginBottom: "1.91em",
     
     [theme.breakpoints.down("md")]: {
       margin: 0,
@@ -250,11 +248,11 @@ const useStyles = makeStyles((theme) => ({
     
   },
   archSubtitle: {
-    textAlign: "left",
+    textAlign: "center",
     width: "95%",
     margin: "0 auto",
-    fontSize: "0.85em",
-    marginBottom: "1.5em",
+    fontSize: "1em",
+    marginBottom: "1em",
     
     [theme.breakpoints.down("md")]: {
       margin: '0 auto',
