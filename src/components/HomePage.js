@@ -292,7 +292,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "7em",
     marginTop: "7em",
     height: "35em",
-    
+    backgroundSize:'100%',
     [theme.breakpoints.down("md")]: {
       margin: '0 auto',
       width: "100%",
