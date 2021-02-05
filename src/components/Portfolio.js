@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -86,6 +87,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -98,6 +101,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -111,6 +116,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -124,6 +131,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -133,7 +142,7 @@ const useStyles = makeStyles((theme) => ({
   bTower: {
     backgroundImage: "url(" + bTowers + ")",
     backgroundRepeat: "no-repeat",
-
+    backgroundSize:'100%',
     width: "29%",
     height: "30em",
     textDecoration: "none",
@@ -150,6 +159,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -163,6 +174,7 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -172,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
   hypers: {
     backgroundImage: "url(" + hypers + ")",
     backgroundRepeat: "no-repeat",
-
+    backgroundSize:'100%',
     width: "29%",
     height: "30em",
     textDecoration: "none",
@@ -189,6 +201,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -202,6 +216,8 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    backgroundSize:'100%',
+
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -211,7 +227,7 @@ const useStyles = makeStyles((theme) => ({
   paramour: {
     backgroundImage: "url(" + paramour + ")",
     backgroundRepeat: "no-repeat",
-
+    backgroundSize:'100%',
     width: "29%",
     height: "30em",
     textDecoration: "none",

@@ -218,7 +218,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
-      height:'30em'
+      height:'29em'
     },
   },
   archTitle: {
