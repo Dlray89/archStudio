@@ -72,6 +72,12 @@ const useStyles = makeStyles((theme) => ({
       width: "80%",
       marginBottom: "2em",
     },
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "80%",
+      marginBottom: "2em",
+      backgroundSize:'30em'
+    },
   },
   eeBox: {
     backgroundImage: "url(" + eeBox + ")",

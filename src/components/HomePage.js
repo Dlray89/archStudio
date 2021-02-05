@@ -28,6 +28,25 @@ import smallTeam from "../assets/home/desktop/image-small-team.jpg";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 
+import paramourTab from "../assets/home/tablet/image-hero-paramour.jpg";
+// import federalTab from "../assets/home/tablet/image-hero-federal.jpg";
+// import seraphTab from "../assets/home/tablet/image-hero-seraph.jpg";
+// import trinityTAb from "../assets/home/tablet/image-hero-trinity.jpg";
+import smallTeamTab from "../assets/home/tablet/image-small-team.jpg";
+import delSolTab from "../assets/portfolio/tablet/image-del-sol.jpg";
+import BTowerTab from "../assets/portfolio/tablet/image-228b.jpg";
+import lePrototypeTAb from "../assets/portfolio/tablet/image-prototype.jpg";
+
+
+import paramourMobile from "../assets/home/mobile/image-hero-paramour.jpg";
+// import federalMobile from "../assets/home/mobile/image-hero-federal.jpg";
+// import seraphMobile from "../assets/home/mobile/image-hero-seraph.jpg";
+// import trinityMobile from "../assets/home/mobile/image-hero-trinity.jpg";
+import smallTeamMobile from "../assets/home/mobile/image-small-team.jpg";
+import delSolMobile from "../assets/portfolio/mobile/image-del-sol.jpg";
+import BTowerMobile from "../assets/portfolio/mobile/image-228b.jpg";
+import lePrototypeMobile from "../assets/portfolio/mobile/image-prototype.jpg";
+
 // const AutoPlay = autoPlay(SwipeableViews)
 
 //set heroCard objects
@@ -59,21 +78,39 @@ const heroCards = [
 ];
 
 const useStyles = makeStyles((theme) => ({
+  mainContainer:{
+    marginTop:'-36em',
+    [theme.breakpoints.down('md')]:{
+      width: "99.5%",
+    
+    },
+    [theme.breakpoints.down('sm')]:{
+      width: "100%",
+      marginTop:'-35.3em',
+    
+    }
+  },
   homepage: {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "75em",
     backgroundPositionY: "5%",
     width: "80%",
-    marginTop:'-35em',
     
     marginLeft:'7em',
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+     margin:0,
+      backgroundSize: "87em",
+      backgroundImage:'url(' + paramourTab+ ')'
+    },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-     marginTop:'-36em',
      margin:0,
-      backgroundSize: "55em",
-      backgroundPositionY: "60%",
+      backgroundSize: "40em",
+      backgroundImage:'url(' + paramourMobile + ')',
+      height:'26em',
+
     },
   },
   headerTitle: {
@@ -173,9 +210,17 @@ const useStyles = makeStyles((theme) => ({
     marginLeft:'8em',
     marginTop:'10em',
     height:'35em',
-    [theme.breakpoints.down("sm")]: {
+  
+    
+    [theme.breakpoints.down("md")]: {
       margin: 0,
       width: "100%",
+      height:'35em',
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: 0,
+      width: "98%",
+      height:'30em'
     },
   },
   archTitle: {
@@ -186,12 +231,23 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     marginTop:'1.5em',
     marginBottom: "2.4em",
-    [theme.breakpoints.down("sm")]: {
-      margin: "0.55em auto",
-      width: "75%",
-      fontSize: "2.3em",
-      textAlign: "center",
+    
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginTop:'1em',
+      fontSize:'3.5em',
+      textAlign:'center'
     },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0 auto",
+      width: "75%",
+      fontSize: "2em",
+      textAlign: "center",
+      marginTop:'1.3em'
+      
+    },
+    
   },
   archSubtitle: {
     textAlign: "left",
@@ -199,14 +255,27 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     fontSize: "0.85em",
     marginBottom: "1.5em",
+    
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "68%",
+      marginTop:'1.5em',
+      fontSize:'1em'
+    },
     [theme.breakpoints.down("sm")]: {
       margin: "0.55em auto",
       width: "75%",
+      fontSize:'0.95em'
     },
   },
   imgContainer: {
     width:'40%',
     height:'100%',
+    
+    [theme.breakpoints.down('md')]:{
+      width: "100%",
+    
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -223,11 +292,25 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "7em",
     marginTop: "7em",
     height: "35em",
+    
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "100%",
+      backgroundSize: "100%",
+      backgroundPositionY:'-10em',
+      marginTop:'3em',
+      background: "url(" + smallTeamTab + ")",
+      backgroundRepeat:'no-repeat'
+
+      
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
-      backgroundSize: "45em",
       height: "20em",
+      marginTop:'10em',
+      background: "url(" + smallTeamMobile + ")",
+
     },
   },
   smallTeamTitle: {
@@ -239,10 +322,18 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "3.5em",
     fontFamily: "Spartan, sans-serif",
     fontWeight: 500,
+    
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "50%",
+      fontSize:'4em',
+      marginTop:'2em'
+  
+    },
     [theme.breakpoints.down("sm")]: {
       margin: "0 auto",
       width: "65%",
-      fontSize: "2.5em",
+      fontSize: "2.2em",
       marginTop: "2em",
       marginBottom: "1em",
     },
@@ -252,9 +343,17 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "16em",
     width: "45%",
     marginTop: "1em",
+   
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "50%",
+      fontSize:'1em',
+      marginTop:'2em'
+  
+    },
     [theme.breakpoints.down("sm")]: {
       margin: "0 auto",
-      width: "65%",
+      width: "70%",
     },
   },
   smallTeamButton: {
@@ -275,6 +374,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "6em",
     marginBottom: "5em",
     
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "100%",
+      marginTop: "5em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -282,6 +386,11 @@ const useStyles = makeStyles((theme) => ({
   },
   featureContainer: {
     width: "100%",
+    
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "70%",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "80%",
@@ -294,31 +403,64 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     height: "35em",
     marginRight: "3.4em",
+    
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "70%",
+      backgroundSize:'100%',
+      marginBottom:'2em',
+      backgroundImage: "url(" + delSolTab + ")",
+      height:'19em',
+      backgroundRepeat:'no-repeat'
+    },
     [theme.breakpoints.down("sm")]: {
       width: "79%",
       margin: "0.95em auto",
-      height: "35em",
+      height: "15em",
+      backgroundImage: "url(" + delSolMobile + ")",
+
     },
+    
   },
   featurebTowerImgContainer: {
     width: "30%",
     backgroundImage: "url(" + BTower + ")",
     backgroundRepeat: "no-repeat",
     marginRight: "3.4em",
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "70%",
+      backgroundSize:'100%',
+      marginBottom:'2em',
+      backgroundImage: "url(" + BTowerTab + ")",
+      height: "19em",
+    },
     [theme.breakpoints.down("sm")]: {
       width: "79%",
       margin: "0.95em auto",
-      height: "35em",
+      backgroundImage: "url(" + BTowerMobile + ")",
+      height: "15em",
+
     },
   },
   featureImgLePrototypeContainer: {
     width: "30%",
     backgroundImage: "url(" + lePrototype + ")",
     backgroundRepeat: "no-repeat",
+    
+    [theme.breakpoints.down("md")]: {
+      margin: '0 auto',
+      width: "70%",
+      backgroundSize:'100%',
+      backgroundImage: "url(" + lePrototypeTAb + ")",
+      height: "19em",
+    },
     [theme.breakpoints.down("sm")]: {
       width: "79%",
       margin: "0.95em auto",
-      height: "35em",
+      height: "15em",
+      backgroundImage: "url(" + lePrototypeMobile + ")",
+
     },
   },
   featuresTitle: {
@@ -328,11 +470,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     marginLeft: "2em",
     fontFamily: "Spartan, sans-serif",
+    [theme.breakpoints.down("md")]: {
+      width: "80%",
+      margin:0,
+      marginTop:'2em',
+      marginLeft:'2em',
+      fontSize:'1.5em'
+    },
     [theme.breakpoints.down("sm")]: {
       width: "80%",
-      fontSize: "1em",
-      
-      marginLeft:'1em'
+      fontSize: "1.5em",
+      marginLeft:'1em',
+      margin:0
     },
   },
   featuresLinks: {
@@ -342,10 +491,16 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "2.4em",
     fontFamily: "Spartan, sans-serif",
     fontSize: "0.85em",
+    [theme.breakpoints.down("md")]: {
+      width: "80%",
+      margin: "0em auto",
+      marginLeft:'3.1em',
+      fontSize:'1em'
+    },
     [theme.breakpoints.down("sm")]: {
       width: "80%",
       margin: "0em auto",
-      marginLeft:'1em'
+      marginLeft:'1.7em'
     },
   },
   numberOne: {
@@ -356,6 +511,18 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.15em",
     opacity: "40%",
     marginLeft: "1.9em",
+    textAlign:'right',
+    [theme.breakpoints.down("md")]: {
+      width: "20%",
+      margin: "0em auto",
+      marginLeft:'4.5em',
+
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "20%",
+      margin: "0em auto",
+      marginLeft:'1.9em',
+    },
   },
   numberTwo: {
     color: "white",
@@ -365,6 +532,20 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.15em",
     opacity: "40%",
     marginLeft: "1.55em",
+    textAlign:'right',
+
+    [theme.breakpoints.down("md")]: {
+      width: "20%",
+      margin: "0em auto",
+      marginLeft:'4.5em',
+
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "30%",
+      margin: "0em auto",
+      marginLeft:'1.8em',
+
+    },
   },
   numberThree: {
     color: "white",
@@ -374,6 +555,19 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "0.15em",
     opacity: "40%",
     marginLeft: "1.6em",
+    textAlign:'right',
+    [theme.breakpoints.down("md")]: {
+      width: "20%",
+      margin: "0em auto",
+      marginLeft:'4.5em',
+
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "30%",
+      margin: "0em auto",
+      marginLeft:'1.8em',
+
+    },
   },
   featureHeader: {
     fontSize: "2.5em",
@@ -401,6 +595,12 @@ const useStyles = makeStyles((theme) => ({
     width: "72%",
     marginLeft: "7em",
     marginTop: "5em",
+    [theme.breakpoints.down('md')]:{
+      width: "100%",
+      margin:0,
+      marginTop:'10em',
+      height:'20em'
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -412,6 +612,12 @@ const useStyles = makeStyles((theme) => ({
     width: "15%",
     boxSizing: "border-box",
     height: "12em",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "20%",
+      marginTop: "-5em",
+      height: "10em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "30%",
@@ -420,7 +626,11 @@ const useStyles = makeStyles((theme) => ({
       height: "8em",
     },
   },
-  logoContainer: {},
+  logoContainer: {
+    [theme.breakpoints.down("sm")]: {
+      margin: 0,
+    },
+  },
   logo: {
     marginTop: "4em",
     [theme.breakpoints.down("sm")]: {
@@ -432,10 +642,17 @@ const useStyles = makeStyles((theme) => ({
     width: "60%",
     marginLeft: "3em",
     marginTop: "2em",
+    
+    [theme.breakpoints.down("md")]: {
+      width: "50%",
+      margin:'1em auto',
+      textAlign:'center'
+      
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
-      marginTop: "5em",
+      marginTop: "0.35em",
       marginBottom: "0em",
     },
   },
@@ -457,15 +674,20 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonMainContainer: {
     width: "20%",
-    position: "absolute",
+    position: "inherit",
     left: "73%",
+    [theme.breakpoints.down("md")]: {
+      width: "50%",
+      margin:'0 auto',
+      textAlign:'center'
+      
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
       textAlign: "center",
-      marginTop: "3em",
+      marginTop: "1em",
       left: 0,
-      position: "static",
     },
   },
   buttonContainer: {
@@ -498,7 +720,7 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down("md"));
   //create state of active step here
   const [activeButton, setActiveButton] = useState(0);
   //set the max of herocards in the object array by using .length
@@ -517,7 +739,7 @@ const HomePage = () => {
   //   }
 
   return (
-    <div>
+    <div className={classes.mainContainer}>
       <Grid
         container
         direction="column"

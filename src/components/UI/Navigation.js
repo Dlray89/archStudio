@@ -20,6 +20,14 @@ import MenuIcon from "@material-ui/icons/Menu";
 const useStyles = makeStyles((theme) => ({
   Nav: {
     marginBottom: "30em",
+    [theme.breakpoints.down('md')]:{
+      width: "100%",
+    
+    },
+    [theme.breakpoints.down('sm')]:{
+      width: "100%",
+    
+    }
   },
   imgCOntainer: {},
   logo: {
