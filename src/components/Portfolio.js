@@ -23,35 +23,61 @@ import seraph from "../assets/portfolio/desktop/image-seraph.jpg";
 import sxiv from "../assets/portfolio/desktop/image-sxiv.jpg";
 import trinity from "../assets/portfolio/desktop/image-trinity.jpg";
 
+import bTowersTab from "../assets/portfolio/tablet/image-228b.jpg";
+import delSolTab from "../assets/portfolio/tablet/image-del-sol.jpg";
+import edelweissTab from "../assets/portfolio/tablet/image-edelweiss.jpg";
+import eeBoxTab from "../assets/portfolio/tablet/image-eebox.jpg";
+import federalimgTab from "../assets/portfolio/tablet/image-federal.jpg";
+import hypersTab from "../assets/portfolio/tablet/image-hypers.jpg";
+import netcryTab from "../assets/portfolio/tablet/image-netcry.jpg";
+import paramourTab from "../assets/portfolio/tablet/image-paramour.jpg";
+import prototypeTab from "../assets/portfolio/tablet/image-prototype.jpg";
+import seraphTab from "../assets/portfolio/tablet/image-seraph.jpg";
+import sxivTab from "../assets/portfolio/tablet/image-sxiv.jpg";
+import trinityTab from "../assets/portfolio/tablet/image-trinity.jpg";
+
+import bTowersMobile from "../assets/portfolio/mobile/image-228b.jpg";
+import delSolMobile from "../assets/portfolio/mobile/image-del-sol.jpg";
+import edelweissMobile from "../assets/portfolio/mobile/image-edelweiss.jpg";
+import eeBoxMobile from "../assets/portfolio/mobile/image-eebox.jpg";
+import federalimgMobile from "../assets/portfolio/mobile/image-federal.jpg";
+import hypersMobile from "../assets/portfolio/mobile/image-hypers.jpg";
+import netcryMobile from "../assets/portfolio/mobile/image-netcry.jpg";
+import paramourMobile from "../assets/portfolio/mobile/image-paramour.jpg";
+import prototypeMobile from "../assets/portfolio/mobile/image-prototype.jpg";
+import seraphMobile from "../assets/portfolio/mobile/image-seraph.jpg";
+import sxivMobile from "../assets/portfolio/mobile/image-sxiv.jpg";
+import trinityMobile from "../assets/portfolio/mobile/image-trinity.jpg";
+
 const useStyles = makeStyles((theme) => ({
   portfolio: {
-   
     width: "87%",
-    marginTop:'-125em',
-    marginLeft:'6.5em',
-    [theme.breakpoints.down("sm")]: {
-      width: "99%",
-      marginTop:'-123.5em',
-      margin:0
+    marginTop: "-125em",
+    marginLeft: "6.5em",
+    [theme.breakpoints.down("md")]: {
+      width: "95%",
+      marginTop: "-123.5em",
+      margin: "0 auto",
+      marginLeft:'3em'
     },
   },
   mainGridContainer: {},
   containerOne: {
     marginBottom: "3em",
-    [theme.breakpoints.down("sm")]: {
-      margin: 0,
+    [theme.breakpoints.down("md")]: {
+      marginBottom: "1em",
     },
   },
   containerTwo: {
     marginBottom: "3em",
-    [theme.breakpoints.down("sm")]: {
-      margin: 0,
+    [theme.breakpoints.down("md")]: {
+      marginBottom: "1em",
     },
   },
   containerThree: {
     marginBottom: "3em",
-    [theme.breakpoints.down("sm")]: {
-      margin: 0,
+    [theme.breakpoints.down("md")]: {
+      marginBottom: "1em",
     },
   },
   containerFour: {
@@ -67,17 +93,22 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
-    [theme.breakpoints.down("sm")]: {
-      margin: 0,
-      width: "80%",
-      marginBottom: "2em",
-    },
+    backgroundSize: "100%",
     [theme.breakpoints.down("md")]: {
       margin: 0,
-      width: "80%",
+      width: "100%",
       marginBottom: "2em",
-      backgroundSize:'30em'
+      backgroundSize: "100%",
+      backgroundImage: "url(" + seraphTab + ")",
+      height: "22em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: 0,
+      width: "95%",
+      marginBottom: "2em",
+      backgroundImage: "url(" + seraphMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   eeBox: {
@@ -87,12 +118,23 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+      backgroundImage: "url(" + eeBoxTab + ")",
+      height: "22em",
+    },
 
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + eeBoxMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   federal: {
@@ -101,12 +143,24 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + federalimgTab + ")",
+      height: "22em",
+    },
 
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + federalimgMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   delSol: {
@@ -116,12 +170,24 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + delSolTab + ")",
+      height: "22em",
+    },
 
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + delSolMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   prototype: {
@@ -131,25 +197,49 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + prototypeTab + ")",
+      height: "22em",
+    },
 
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + prototypeMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   bTower: {
     backgroundImage: "url(" + bTowers + ")",
     backgroundRepeat: "no-repeat",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + bTowersTab + ")",
+      height: "22em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + bTowersMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   edelweiss: {
@@ -159,12 +249,24 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + edelweissTab + ")",
+      height: "22em",
+    },
 
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + edelweissMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   netcry: {
@@ -174,24 +276,48 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + netcryTab + ")",
+      height: "22em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + netcryMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   hypers: {
     backgroundImage: "url(" + hypers + ")",
     backgroundRepeat: "no-repeat",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + hypersTab + ")",
+      height: "22em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + hypersMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   sxiv: {
@@ -201,12 +327,23 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
 
+      backgroundImage: "url(" + sxivTab + ")",
+      height: "22em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + sxivMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   trinity: {
@@ -216,25 +353,49 @@ const useStyles = makeStyles((theme) => ({
     width: "29%",
     height: "30em",
     textDecoration: "none",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + trinityTab + ")",
+      height: "22em",
+    },
 
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + trinityMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   paramour: {
     backgroundImage: "url(" + paramour + ")",
     backgroundRepeat: "no-repeat",
-    backgroundSize:'100%',
+    backgroundSize: "100%",
     width: "29%",
     height: "30em",
     textDecoration: "none",
+    [theme.breakpoints.down("md")]: {
+      margin: 0,
+      width: "100%",
+      marginBottom: "2em",
+      backgroundSize: "100%",
+
+      backgroundImage: "url(" + paramourTab + ")",
+      height: "22em",
+    },
     [theme.breakpoints.down("sm")]: {
       margin: 0,
-      width: "80%",
+      width: "95%",
       marginBottom: "2em",
+      backgroundImage: "url(" + paramourMobile + ")",
+      backgroundSize: "100%",
+      height: "17em",
     },
   },
   portfolioTitle: {
@@ -246,6 +407,14 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "1.35em",
     fontSize: "1.3em",
     fontWeight: "500",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "6em",
+      fontSize: "2.5em",
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize:'1.5em',
+      marginTop:'8em'
+    }
   },
   portfolioDate: {
     color: "white",
@@ -253,6 +422,14 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     textAlign: "left",
     marginLeft: "1.7em",
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "2.6em",
+      fontSize: "1.3em",
+    },
+    [theme.breakpoints.down('sm')]:{
+      fontSize:'0.85em',
+      marginLeft:'2.4em'
+    }
   },
   Footer: {
     background: "#EEEFF4",
@@ -304,8 +481,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Spartan, sans-serif",
     fontWeight: 700,
     fontSize: "0.75em",
-    textDecoration:'none',
-    color:'black',
+    textDecoration: "none",
+    color: "black",
     [theme.breakpoints.down("sm")]: {
       margin: 0,
       width: "100%",
@@ -344,6 +521,21 @@ const useStyles = makeStyles((theme) => ({
       margin: 0,
     },
   },
+  backShadow: {
+    background: "rgba(27, 20, 17, 0.3)",
+    height: "100%",
+    width: "100%",
+    [theme.breakpoints.down("md")]: {
+      background: "rgba(27, 20, 17, 0.3)",
+      height: "100%",
+      width: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      background: "rgba(27, 20, 17, 0.3)",
+      height: "100%",
+      width: "100%",
+    },
+  },
 }));
 
 const Portfolio = () => {
@@ -375,6 +567,7 @@ const Portfolio = () => {
             component={Link}
           >
             <div
+              className={classes.backShadow}
               style={{
                 background: "rgba(27, 20, 17, 0.3)",
                 height: "100%",
@@ -705,20 +898,10 @@ const Portfolio = () => {
           alignItems="center"
           className={classes.linksCOntainer}
         >
-          <Grid
-            item
-            className={classes.links}
-            component={Link}
-            to="/"
-          >
+          <Grid item className={classes.links} component={Link} to="/">
             Home
           </Grid>
-          <Grid
-            item
-            className={classes.links}
-            component={Link}
-            to="/portfolio"
-          >
+          <Grid item className={classes.links} component={Link} to="/portfolio">
             Portfolio
           </Grid>
 

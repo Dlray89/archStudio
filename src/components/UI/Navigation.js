@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
   Nav: {
     marginBottom: "30em",
     [theme.breakpoints.down('md')]:{
-      width: "100%",
+      width: "90%",
+      border:'solid 2px green'
     
     },
     [theme.breakpoints.down('sm')]:{
@@ -32,9 +33,18 @@ const useStyles = makeStyles((theme) => ({
   imgCOntainer: {},
   logo: {
     marginRight: "3em",
+    [theme.breakpoints.down('md')]:{
+      marginLeft:'3em',
+      marginTop:'1em'
+    }
   },
   linksContainer: {
     width: "100%",
+    [theme.breakpoints.down('md')]:{
+      marginLeft:'3em',
+      marginTop:'1em'
+
+    }
   },
   links: {
     fontFamily: "Spartan, sans-serif",
@@ -47,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
   lineContainer: {
     width: "100%",
     marginRight: "3em",
+    [theme.breakpoints.down('md')]:{
+      width: "100%",
+    
+    },
   },
   lineHome: {
     lineHeight: 1,
@@ -61,23 +75,40 @@ const useStyles = makeStyles((theme) => ({
   },
   containerOne: {
     width: "8%",
+    [theme.breakpoints.down('md')]:{
+      width: "100%",
+    
+    },
   },
   containerTwo: {
     width: "60%",
     marginBottom: "6em",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: "100%",
     },
   },
   portNav: {
     marginBottom: "120em",
+    [theme.breakpoints.down('md')]:{
+      width: "100%",
+    
+    }
   },
   portimgCOntainer: {},
   portlogo: {
     marginRight: "3em",
+    [theme.breakpoints.down('md')]:{
+      marginLeft:'3em',
+      marginTop:'1em'
+    }
   },
   portlinksContainer: {
     width: "80%",
+    [theme.breakpoints.down('md')]:{
+      marginLeft:'3em',
+      marginTop:'1em',
+      border:'solid 2px blue'
+    }
   },
   portlinks: {
     fontFamily: "Spartan, sans-serif",
@@ -108,10 +139,13 @@ const useStyles = makeStyles((theme) => ({
   portcontainerTwo: {
     width: "60%",
     marginBottom: "5em",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: "100%",
     },
   },
+  appbar:{
+    border:'solid 2px blue'
+  }
 }));
 
 const navLinks = [
@@ -217,7 +251,7 @@ const Navigation = () => {
 
   const mobileNav = (
     <React.Fragment>
-      <AppBar style={{background:'white'}}>
+      <AppBar className={classes.appbar} style={{background:'white'}}>
         <Toolbar>
         <Grid
             item
@@ -225,25 +259,26 @@ const Navigation = () => {
             direction="row"
             justify="space-between"
             style={{width:'100%', padding:'1%'}}
+            className={classes.mobileNavContainer}
           >
-            <Grid item className={classes.imgCOntainer} style={{margin:0, padding:0, marginTop:'0.45em'}}>
-              <img style={{margin:0, width:'5em'}} className={classes.logo} alt="logo of Arch" src={Logo} />
+            <Grid item className={classes.imgMobile} style={{margin:0, padding:0, marginTop:'0.45em'}}>
+              <img style={{margin:0, width:'5em'}} className={classes.logoMobile} alt="logo of Arch" src={Logo} />
             </Grid>
             
 
               <Grid item>
                 {switchNav ? (
-                    <Grid container direction='column'>
+                    <Grid container direction='column' className={classes.mainLinkContainer}>
                       <Grid item>
                       <Button onClick={navSwitchBack} >X</Button>
                       </Grid>
 
-                      <Grid item container direction='column' style={{ position:'absolute', top:'100%', left:'30%', width:'70%',  background:'#eeeff4'}}>
+                      <Grid className={classes.mobileLinKContainer} item container direction='column' style={{ position:'absolute', top:'100%', left:'30%', width:'70%',  background:'#eeeff4'}}>
                         
-                          <Grid item component={Link} to='/' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Home</Button></Grid>
-                          <Grid item component={Link} to='/portfolio' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Portfolio</Button></Grid>
-                          <Grid item component={Link} to='/aboutus' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>About Us</Button></Grid>
-                          <Grid item component={Link} to='/contact' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Contact</Button></Grid>
+                          <Grid className={classes.mobileLinks} item component={Link} to='/' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Home</Button></Grid>
+                          <Grid className={classes.mobileLinks}  item component={Link} to='/portfolio' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Portfolio</Button></Grid>
+                          <Grid className={classes.mobileLinks}  item component={Link} to='/aboutus' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>About Us</Button></Grid>
+                          <Grid className={classes.mobileLinks}  item component={Link} to='/contact' style={{color:'black',  textDecoration:'none'}} onClick={navSwitchBack}><Button style={{width:'100%', borderRadius:0}}>Contact</Button></Grid>
                      
                       </Grid>
 

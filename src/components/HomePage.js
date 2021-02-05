@@ -81,7 +81,8 @@ const useStyles = makeStyles((theme) => ({
   mainContainer:{
     marginTop:'-36em',
     [theme.breakpoints.down('md')]:{
-      width: "99.5%",
+      width: "100%",
+      marginTop:'-35em'
     
     },
     [theme.breakpoints.down('sm')]:{
