@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   homepage: {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    backgroundSize: "75em",
+    backgroundSize: "78em",
     backgroundPositionY: "5%",
     width: "80%",
     
@@ -401,9 +401,9 @@ const useStyles = makeStyles((theme) => ({
     width: "30%",
     backgroundImage: "url(" + delSol + ")",
     backgroundRepeat: "no-repeat",
-    height: "35em",
+    height: "33em",
     marginRight: "3.4em",
-    
+    backgroundSize:'100%',
     [theme.breakpoints.down("md")]: {
       margin: '0 auto',
       width: "70%",
@@ -427,6 +427,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: "url(" + BTower + ")",
     backgroundRepeat: "no-repeat",
     marginRight: "3.4em",
+    backgroundSize:'100%',
+    height:'33em',
+
     [theme.breakpoints.down("md")]: {
       margin: '0 auto',
       width: "70%",
@@ -447,7 +450,8 @@ const useStyles = makeStyles((theme) => ({
     width: "30%",
     backgroundImage: "url(" + lePrototype + ")",
     backgroundRepeat: "no-repeat",
-    
+    backgroundSize:'100%',
+    height:'33em',
     [theme.breakpoints.down("md")]: {
       margin: '0 auto',
       width: "70%",
@@ -465,7 +469,7 @@ const useStyles = makeStyles((theme) => ({
   },
   featuresTitle: {
     color: "white",
-    marginTop: "20em",
+    marginTop: "18em",
     fontWeight: 600,
     textAlign: "left",
     marginLeft: "2em",
