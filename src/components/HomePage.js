@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "100%",
      margin:0,
-      backgroundSize: "40em",
+      backgroundSize: "60em",
       backgroundImage:'url(' + paramourMobile + ')',
       height:'26em',
 
