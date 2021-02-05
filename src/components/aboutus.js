@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import heroCard from "../assets/about/desktop/image-hero.jpg";
 import heroCardTab from "../assets/about/tablet/image-hero.jpg";
-import heroCardMobile from "../assets/about/desktop/image-hero.jpg";
+// import heroCardMobile from "../assets/about/desktop/image-hero.jpg";
 
 import heritage from "../assets/about/desktop/image-heritage.jpg";
 
