@@ -243,7 +243,7 @@ const useStyles = makeStyles((theme) => ({
       width: "75%",
       fontSize: "2em",
       textAlign: "center",
-      marginTop:'1.3em'
+      marginTop:'1em'
       
     },
     
@@ -262,7 +262,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize:'1em'
     },
     [theme.breakpoints.down("sm")]: {
-      margin: "0.55em auto",
+      margin: "0.15em auto",
       width: "75%",
       fontSize:'0.95em'
     },

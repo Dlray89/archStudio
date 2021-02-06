@@ -83,6 +83,9 @@ const useStyles = makeStyles((theme) => ({
   containerTwo: {
     width: "60%",
     marginBottom: "6em",
+    [theme.breakpoints.up('lg')]:{
+        width:'70%'
+    },
     [theme.breakpoints.down("md")]: {
       width: "100%",
     },
@@ -107,7 +110,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]:{
       marginLeft:'3em',
       marginTop:'1em',
-      border:'solid 2px blue'
     }
   },
   portlinks: {
@@ -144,7 +146,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appbar:{
-    border:'solid 2px blue'
   }
 }));
 
@@ -365,6 +366,7 @@ const Navigation = () => {
           </Grid>
         </Grid>
       ) : (
+        
         <Grid
           className={classes.Nav}
           container
@@ -421,15 +423,18 @@ const Navigation = () => {
             justify={matchesSM ? "space-between" : null}
             className={classes.containerTwo}
           >
+            <Hidden smDown>
             <Grid item className={classes.imgCOntainer}>
               <img className={classes.logo} alt="logo of Arch" src={Logo} />
             </Grid>
+            </Hidden>
             
 
               <Grid item>{matchesSM ? mobileNav : deskTopNav}</Grid>
            
           </Grid>
         </Grid>
+        
       )}
     </div>
   );
